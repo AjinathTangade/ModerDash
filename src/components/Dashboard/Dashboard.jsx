@@ -1,20 +1,23 @@
 import React from "react";
+import NavBar from "../NavBar/NavBar";
+import SliderComponent from "../SliderComponent/SliderComponent";
+import { Carousel } from "../ui/carousel";
+import Slider from "../SliderComponent/Slider";
+import CardDemo from "../SliderComponent/CardDemo";
+
 
 function Dashboard() {
   return (
-    <div className="py-5">
-      Dashboard Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Suscipit, iste, molestias quod, natus repudiandae perferendis eveniet
-      reiciendis cumque unde aperiam sint doloribus? Accusamus natus atque
-      mollitia illum cum, corrupti officiis molestiae soluta ipsum reprehenderit
-      esse accusantium distinctio qui obcaecati ad laborum vero, minima quidem
-      voluptate magnam. Enim voluptatibus dolor cum possimus deleniti debitis
-      sapiente, alias temporibus. Inventore eveniet beatae commodi maxime,
-      reprehenderit dolorem. Maiores animi, repellendus cum tenetur dolore
-      consequatur suscipit, culpa repudiandae alias, vero possimus modi tempora
-      aliquam est incidunt earum a consequuntur recusandae excepturi velit
-      cumque ratione eius corrupti adipisci. Esse consequuntur cum quisquam
-      similique temporibus blanditiis vero?
+    <div className="pb-5 w-5/6">
+      <NavBar />
+      <div className="relative top-16">
+        <div className="w-full">
+          <div className="w-8/12 mx-auto">
+            <Slider/>
+            <CardDemo />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 function App() {
   return (
     <>
-      <div className="flex gap-20 px-5 border">
+      <div className=" flex px-5">
         <SideBar />
         <Dashboard/>
       </div>

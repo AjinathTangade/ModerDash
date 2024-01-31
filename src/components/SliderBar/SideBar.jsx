@@ -6,14 +6,17 @@ import { NavLink } from "react-router-dom";
 
 function SideBar() {
   return (
-    <div className="min-w-60 border-r border-indigo-100 py-5">
-      <div className="mb-10">
-        <Link className="text-2xl font-bold flex gap-2 items-center">
+    <div className="w-1/6 border-r border-indigo-100 py-5 relative h-screen flex flex-col">
+      <div className="">
+        <Link
+          to="/"
+          className="text-2xl font-bold flex gap-2 items-center"
+        >
           <img src="logo.png" alt="logo-sidebar" />
           <span>ModerDash</span>
         </Link>
       </div>
-      <div>
+      <div className="overflow-y-auto h-screen sticky top-16 min-w-60">
         <nav>
           <ul className="my-5">
             <h3 className="font-semibold pb-3">Home</h3>
