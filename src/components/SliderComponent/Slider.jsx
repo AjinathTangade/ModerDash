@@ -19,6 +19,9 @@ function Slider() {
             <div className="p-1">
               <CardDemo />
             </div>
+            <div className="p-1">
+              <CardDemo />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>

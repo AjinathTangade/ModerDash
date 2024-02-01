@@ -5,16 +5,32 @@ import { Carousel } from "../ui/carousel";
 import Slider from "../SliderComponent/Slider";
 import CardDemo from "../SliderComponent/CardDemo";
 
-
 function Dashboard() {
   return (
-    <div className="pb-5 w-5/6">
+    <div className="xl:w-5/6">
       <NavBar />
-      <div className="relative top-16">
+      <div className="relative top-0 xl:top-16">
         <div className="w-full">
-          <div className="w-8/12 mx-auto">
-            <Slider/>
-            <CardDemo />
+          <div className="mx-5 xl:w-9/12 xl:mx-auto">
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
+            <SliderComponent />
           </div>
         </div>
       </div>

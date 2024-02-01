@@ -5,9 +5,9 @@ import Dashboard from "./components/Dashboard/Dashboard";
 function App() {
   return (
     <>
-      <div className=" flex px-5">
+      <div className="xl:flex overflow-hidden px-5">
         <SideBar />
-        <Dashboard/>
+        <Dashboard />
       </div>
     </>
   );
