@@ -1,9 +1,6 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
 import SliderComponent from "../SliderComponent/SliderComponent";
-import { Carousel } from "../ui/carousel";
-import Slider from "../SliderComponent/Slider";
-import CardDemo from "../SliderComponent/CardDemo";
 
 function Dashboard() {
   return (

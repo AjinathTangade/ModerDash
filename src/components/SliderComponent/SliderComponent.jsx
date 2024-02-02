@@ -19,7 +19,7 @@ function SliderComponent() {
         {slidesData.map((slide, index) => (
           <div key={index}>
             <div
-              className={`bg-${slide.bgColor} min-h-44 w-44 flex flex-col items-center justify-center rounded-lg gap-3 ml-5`}
+              className={`bg-${slide.bgColor} min-h-44 w-44 flex flex-col items-center justify-center rounded-lg gap-3 mx-2`}
             >
               <div>
                 <img src={slide.icon} alt={slide.title} />

@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import "@flaticon/flaticon-uicons/css/all/all.css";
 import { MobileNav } from "../MobileNav/MobileNav";
+import { Country } from "./Country";
+import Notifications from "./Notifications";
+import UserProfile from "./UserProfile";
+import { ShoppingCard } from "./ShoppingCart";
 
 function NavBar() {
   const [scrolling, setScrolling] = useState(false);
@@ -30,7 +34,10 @@ function NavBar() {
             <MobileNav />
           </div>
           <div className="z-30">
-            <Link to="/" className="text-2xl font-bold flex gap-2 items-center ">
+            <Link
+              to="/"
+              className="text-2xl font-bold flex gap-2 items-center "
+            >
               <img src="logo.png" alt="logo-sidebar" />
               <span>ModerDash</span>
             </Link>
@@ -38,27 +45,45 @@ function NavBar() {
         </div>
 
         <nav
-          className={`fixed top-0 bg-white min-w-full h-16 p-5 z-10 hidden xl:block ${
-            scrolling ? "drop-shadow-sm" : ""
+          className={`fixed top-0 bg-white min-w-full h-16 p-5 z-10 flex items-center gap-4 invisible xl:visible ${
+            scrolling ? "drop-shadow-md" : ""
           }`}
         >
-          <div className="flex items-center hidden xl:block">
-          <div className="flex space-x-4 ">
-            <Link to="/" className="text-gray-800 hover:text-gray-300">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-800 hover:text-gray-300">
-              About
-            </Link>
-            <Link to="/pages" className="text-gray-800 hover:text-gray-300">
-              Pages
-            </Link>
-            <Link to="/blog" className="text-gray-800 hover:text-gray-300">
-              Blog
-            </Link>
+          <span>
+            <i className="fi fi-rr-search"></i>
+          </span>
+          <div className="flex items-center justify-between w-9/12">
+            <div className="flex items-center hidden xl:block">
+              <div className="flex space-x-4 ">
+                <Link to="/" className="text-sm text-gray-600">
+                  Home
+                </Link>
+                <Link to="/about" className="text-sm text-gray-600">
+                  About
+                </Link>
+                <Link to="/pages" className="text-sm text-gray-600">
+                  Pages
+                </Link>
+                <Link to="/blog" className="text-sm text-gray-600">
+                  Blog
+                </Link>
+              </div>
+            </div>
+            <div className="flex gap-5 items-center">
+              <div className="h-9 w-10">
+                <Country />
+              </div>
+              <div>
+                <Notifications />
+              </div>
+              <div>
+                <UserProfile />
+              </div>
+              <div>
+                <ShoppingCard />
+              </div>
+            </div>
           </div>
-          </div>
-          
         </nav>
       </div>
     </div>

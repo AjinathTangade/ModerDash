@@ -128,4 +128,23 @@ const slidesData = [
     value: "3,865",
   },
 ];
-export { sideBarLinks, sideBarLinksHome, slidesData };
+const countryCode = [
+  {
+    icon: "/icon-flag-cn.svg",
+    title: "中国人 (Chinese)",
+  },
+  {
+    icon: "/icon-flag-en.svg",
+    title: "English (UK)",
+  },
+  {
+    icon: "/icon-flag-fr.svg",
+    title: "français (French)",
+  },
+  {
+    icon: "/icon-flag-sa.svg",
+    title: "عربي (Arabic)",
+  },
+  
+];
+export { sideBarLinks, sideBarLinksHome, slidesData, countryCode };
