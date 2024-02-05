@@ -76,11 +76,12 @@ function NavBar() {
               <div>
                 <Notifications />
               </div>
-              <div>
-                <UserProfile />
-              </div>
+              
               <div>
                 <ShoppingCard />
+              </div>
+              <div>
+                <UserProfile />
               </div>
             </div>
           </div>

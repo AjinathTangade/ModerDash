@@ -94,7 +94,7 @@ export function ShoppingCard() {
                                 className="bg-blue-500 text-white p-0.5 rounded"
                                 onClick={decrementQuantity}
                               >
-                                <i class="fi fi-rr-minus-small"></i>
+                                <i className="fi fi-rr-minus-small"></i>
                               </button>
                               <span className="text-xs font-medium text-gray-500 w-5 h-5 flex items-center justify-center">
                                 {quantity}
@@ -103,7 +103,7 @@ export function ShoppingCard() {
                                 className="bg-blue-500 text-white p-0.5 rounded"
                                 onClick={incrementQuantity}
                               >
-                                <i class="fi fi-rr-plus-small"></i>
+                                <i className="fi fi-rr-plus-small"></i>
                               </button>
                             </div>
                           </div>

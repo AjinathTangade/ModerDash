@@ -147,7 +147,6 @@ const countryCode = [
   },
   
 ];
-
 const shoppingCard = [
   {
     id:1,
@@ -167,6 +166,25 @@ const shoppingCard = [
     title: "Cooker toys supreme",
     desc:"Kitchenware Item",
   },
-  
 ];
-export { sideBarLinks, sideBarLinksHome, slidesData, countryCode, shoppingCard };
+const userProfile = [
+  {
+    id:1,
+    img: "/icon-account.svg",
+    title: "My Profile",
+    desc:"Account Settings",
+  },
+  {
+    id:2,
+    img: "/icon-inbox.svg",
+    title: "My Inbox",
+    desc:"Messages & Emails",
+  },
+  {
+    id:3,
+    img: "/icon-tasks.svg",
+    title: "My Task",
+    desc:"To-do and Daily Tasks",
+  },
+];
+export { sideBarLinks, sideBarLinksHome, slidesData, countryCode, shoppingCard, userProfile };
