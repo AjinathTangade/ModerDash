@@ -10,23 +10,21 @@ i{
     display: flex;
 }
 
-/* Works on Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #e0e7ff;
-  }
-  
-  /* Works on Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  /* *::-webkit-scrollbar-track {
-    background: orange;
-  } */
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: #e0e7ff;
-    border-radius: 20px;
-    /* border: 3px solid rgb(124, 124, 124); */
-  }
+
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* *::-webkit-scrollbar-track {
+  background: orange;
+} */
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e0e7ff;
+  border-radius: 20px;
+  width: 3px;
+
+  /* border: 3px solid rgb(124, 124, 124); */
+}

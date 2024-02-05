@@ -16,7 +16,7 @@ function SideBar() {
             <span>ModerDash</span>
           </Link>
         </div>
-        <div className="overflow-y-auto h-screen fixed top-16 w-1/6">
+        <div className="overflow-y-auto h-screen fixed top-16 w-1/6 sidebar">
           <nav>
             <ul className="my-5">
               <h3 className="font-semibold pb-3">Home</h3>

@@ -147,4 +147,26 @@ const countryCode = [
   },
   
 ];
-export { sideBarLinks, sideBarLinksHome, slidesData, countryCode };
+
+const shoppingCard = [
+  {
+    id:1,
+    img: "/product-1.jpg",
+    title: "Supreme toys cooker",
+    desc:"Kitchenware Item",
+  },
+  {
+    id:2,
+    img: "/product-2.jpg",
+    title: "Toys cooker supreme",
+    desc:"Kitchenware Item",
+  },
+  {
+    id:3,
+    img: "/product-3.jpg",
+    title: "Cooker toys supreme",
+    desc:"Kitchenware Item",
+  },
+  
+];
+export { sideBarLinks, sideBarLinksHome, slidesData, countryCode, shoppingCard };

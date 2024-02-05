@@ -1,11 +1,11 @@
 "use client";
 import { Link } from "react-router-dom";
-import { sideBarLinks, sideBarLinksHome } from "@/data/data";
+import { shoppingCard } from "@/data/data";
 import "@flaticon/flaticon-uicons/css/all/all.css";
 import { NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
-// import { Input } from "@/registry/new-york/ui/input";
-// import { Label } from "@/registry/new-york/ui/label";
+import React, { useState } from "react";
+
 import {
   Sheet,
   SheetClose,
@@ -20,6 +20,17 @@ import {
 const SHEET_SIDES = ["right"];
 
 export function ShoppingCard() {
+  const [quantity, setQuantity] = useState(1);
+
+  const incrementQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
   return (
     <div className="relative">
       {SHEET_SIDES.map((side) => (
@@ -35,78 +46,93 @@ export function ShoppingCard() {
               <span className="absolute top-0 right-2">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex rounded-full h-4 w-4 bg-orange-400"></span>
-                  <p className="absolute top-0 right-[-4px] inline-flex text-xs font-medium text-white">2</p>
+                  <p className="absolute top-0 right-[-4px] inline-flex text-xs font-medium text-white">
+                    2
+                  </p>
                 </span>
               </span>
             </Button>
           </SheetTrigger>
           <SheetContent side={side}>
-            <SheetHeader> 
-              <div className="relative h-screen flex flex-col">
-                <div className="mt-3 lg:m-0 border-b-2 border-indigo-400 pb-3 flex items-center justify-center">
-                  <Link
-                    to="/"
-                    className="text-2xl font-bold flex gap-2 items-center"
-                  >
-                    <img src="logo.png" alt="logo-sidebar" />
-                    <span>ModerDash</span>
-                  </Link>
+            <SheetHeader>
+              <div className="relative h-screen flex flex-col m-2">
+                <div className="mt-3 lg:m-0 pb-0 flex items-center justify-between">
+                  <h3 className="text-lg font-semibold flex gap-2">
+                    Shopping Cart
+                  </h3>
+                  <span className="bg-blue-500 px-3 py-1 text-white rounded-full font-medium text-sm flex">
+                    5 new
+                  </span>
                 </div>
-                <div className="overflow-y-auto h-screen top-16 min-w-60">
-                  <nav>
-                    <ul className="my-5">
-                      <h3 className="font-semibold pb-3 text-left">Home</h3>
-                      {sideBarLinksHome.map((link, index) => (
-                        <li
-                          key={index}
-                          className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
-                        >
-                          <span>{link.icon}</span>
-                          <NavLink
-                            href={link.href}
-                            className="text-sm font-medium"
-                          >
-                            {link.label}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
+                <div className="overflow-y-auto h-screen  min-w-60 flex flex-col gap-8 mt-8">
+                  {shoppingCard.map((product, index) => (
+                    <div key={index}>
+                      <div className="flex justfy-beetween items-center w-full gap-6">
+                        <div>
+                          <img
+                            src={product.img}
+                            alt={product.title}
+                            className="rounded-md"
+                          />
+                        </div>
+                        <div className="flex flex-col gap-3">
+                          <div>
+                            <h3 className="text-sm text-gray-600 font-semibold">
+                              {product.title}
+                            </h3>
+                            <p className="text-sm text-gray-400 font-light">
+                              {product.desc}
+                            </p>
+                          </div>
 
-                    <ul className="my-5">
-                      <h3 className="font-semibold pb-3 text-left">Apps</h3>
-                      {sideBarLinks.map((link, index) => (
-                        <li
-                          key={index}
-                          className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
-                        >
-                          <span>{link.icon}</span>
-                          <NavLink
-                            href={link.href}
-                            className="text-sm font-medium"
-                          >
-                            {link.label}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                    <ul className="my-5">
-                      <h3 className="font-semibold pb-3">Apps</h3>
-                      {sideBarLinks.map((link, index) => (
-                        <li
-                          key={index}
-                          className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
-                        >
-                          <span>{link.icon}</span>
-                          <NavLink
-                            href={link.href}
-                            className="text-sm font-medium"
-                          >
-                            {link.label}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
+                          <div className="flex justify-between">
+                            <h5 className="text-sm text-gray-600 font-semibold">
+                              $245
+                            </h5>
+                            <div className="flex items-center justify-between gap-2">
+                              <button
+                                className="bg-blue-500 text-white p-0.5 rounded"
+                                onClick={decrementQuantity}
+                              >
+                                <i class="fi fi-rr-minus-small"></i>
+                              </button>
+                              <span className="text-xs font-medium text-gray-500 w-5 h-5 flex items-center justify-center">
+                                {quantity}
+                              </span>
+                              <button
+                                className="bg-blue-500 text-white p-0.5 rounded"
+                                onClick={incrementQuantity}
+                              >
+                                <i class="fi fi-rr-plus-small"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+
+                  <div className="flex flex-col gap-5">
+                    <div className="flex justify-between">
+                      <h4 className="text-md text-gray-600 font-semibold">
+                        Sub Total
+                      </h4>{" "}
+                      <span className="text-md font-medium text-gray-500 flex items-center justify-center">
+                        $2356
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <h4 className="text-md text-gray-600 font-semibold">
+                        Total
+                      </h4>{" "}
+                      <span className="text-md font-medium text-gray-500 flex items-center justify-center">
+                        $6874
+                      </span>
+                    </div>
+                    <div className="flex text-center">
+                      <Link to="/" className="border border-indigo-400 rounded-md p-2 w-full text-indigo-500 text-sm font-medium hover:bg-indigo-500 hover:text-white">Go to shopping cart</Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </SheetHeader>
