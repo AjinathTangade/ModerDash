@@ -63,7 +63,7 @@ export default function UserProfile() {
             <div>
               <div className="flex flex-col gap-6 py-6">
                 {userProfile.map((profile, index) => (
-                  <Link to="/">
+                  <Link to="/" key={index}>
                     <div
                       key={index}
                       className="px-1 flex gap-5 items-center gap-4"
@@ -95,13 +95,18 @@ export default function UserProfile() {
                   </button>
                 </div>
                 <div>
-                  <img src="/unlimited-bg.png" alt="" />
+                  <img src="/unlimited-bg.png" alt="unlimited-bg" />
                 </div>
               </div>
             </div>
             <div className="flex text-center mt-5">
-                      <Link to="/" className="border border-indigo-400 rounded-md p-2 w-full text-indigo-500 text-sm font-medium hover:bg-indigo-500 hover:text-white">Log Out</Link>
-                    </div>
+              <Link
+                to="/"
+                className="border border-indigo-400 rounded-md p-2 w-full text-indigo-500 text-sm font-medium hover:bg-indigo-500 hover:text-white"
+              >
+                Log Out
+              </Link>
+            </div>
           </Menu.Items>
         </Transition>
       </Menu>

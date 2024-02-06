@@ -20,17 +20,28 @@ import {
 const SHEET_SIDES = ["right"];
 
 export function ShoppingCard() {
-  const [quantity, setQuantity] = useState(1);
+  const [quantities, setQuantities] = useState(
+    shoppingCard.map(() => 1) // Initialize quantities for each product to 1
+  );
 
-  const incrementQuantity = () => {
-    setQuantity(quantity + 1);
+  const incrementQuantity = (index) => {
+    setQuantities((prevQuantities) => {
+      const newQuantities = [...prevQuantities];
+      newQuantities[index] += 1;
+      return newQuantities;
+    });
   };
 
-  const decrementQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
+  const decrementQuantity = (index) => {
+    setQuantities((prevQuantities) => {
+      const newQuantities = [...prevQuantities];
+      if (newQuantities[index] > 1) {
+        newQuantities[index] -= 1;
+      }
+      return newQuantities;
+    });
   };
+
   return (
     <div className="relative">
       {SHEET_SIDES.map((side) => (
@@ -45,9 +56,9 @@ export function ShoppingCard() {
               </span>
               <span className="absolute top-0 right-2">
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex rounded-full h-4 w-4 bg-orange-400"></span>
-                  <p className="absolute top-0 right-[-4px] inline-flex text-xs font-medium text-white">
-                    2
+                  {/* <span className="absolute inline-flex rounded-full h-4 w-4 bg-orange-400"></span> */}
+                  <p className="absolute top-0  text-xs font-medium text-white rounded-full h-4 w-4 bg-orange-400">
+                    {quantities.reduce((acc, curr) => acc + curr, 0)}{" "}
                   </p>
                 </span>
               </span>
@@ -92,16 +103,16 @@ export function ShoppingCard() {
                             <div className="flex items-center justify-between gap-2">
                               <button
                                 className="bg-blue-500 text-white p-0.5 rounded"
-                                onClick={decrementQuantity}
+                                onClick={() => decrementQuantity(index)}
                               >
                                 <i className="fi fi-rr-minus-small"></i>
                               </button>
                               <span className="text-xs font-medium text-gray-500 w-5 h-5 flex items-center justify-center">
-                                {quantity}
+                                {quantities[index]}
                               </span>
                               <button
                                 className="bg-blue-500 text-white p-0.5 rounded"
-                                onClick={incrementQuantity}
+                                onClick={() => incrementQuantity(index)}
                               >
                                 <i className="fi fi-rr-plus-small"></i>
                               </button>
@@ -111,7 +122,6 @@ export function ShoppingCard() {
                       </div>
                     </div>
                   ))}
-
                   <div className="flex flex-col gap-5">
                     <div className="flex justify-between">
                       <h4 className="text-md text-gray-600 font-semibold">
@@ -130,7 +140,12 @@ export function ShoppingCard() {
                       </span>
                     </div>
                     <div className="flex text-center">
-                      <Link to="/" className="border border-indigo-400 rounded-md p-2 w-full text-indigo-500 text-sm font-medium hover:bg-indigo-500 hover:text-white">Go to shopping cart</Link>
+                      <Link
+                        to="/"
+                        className="border border-indigo-400 rounded-md p-2 w-full text-indigo-500 text-sm font-medium hover:bg-indigo-500 hover:text-white"
+                      >
+                        Go to shopping cart
+                      </Link>
                     </div>
                   </div>
                 </div>
