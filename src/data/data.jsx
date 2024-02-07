@@ -187,4 +187,36 @@ const userProfile = [
     desc:"To-do and Daily Tasks",
   },
 ];
-export { sideBarLinks, sideBarLinksHome, slidesData, countryCode, shoppingCard, userProfile };
+const userNotification = [
+  {
+    id:1,
+    img: "/user-1.jpg",
+    title: "Roman Joined the Team!",
+    desc:"Congratulate him",
+  },
+  {
+    id:2,
+    img: "/user-2.jpg",
+    title: "New message",
+    desc:"Salma sent you new message",
+  },
+  {
+    id:3,
+    img: "/user-3.jpg",
+    title: "Bianca sent payment",
+    desc:"Check your earnings",
+  },
+  {
+    id:4,
+    img: "/user-4.jpg",
+    title: "Jolly completed tasks",
+    desc:"Assign her new tasks",
+  },
+  {
+    id:5,
+    img: "/user-5.jpg",
+    title: "John received payment",
+    desc:"$230 deducted from account",
+  },
+];
+export { sideBarLinks, sideBarLinksHome, slidesData, countryCode, shoppingCard, userProfile, userNotification };
