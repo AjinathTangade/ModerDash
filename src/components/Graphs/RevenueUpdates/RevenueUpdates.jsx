@@ -146,7 +146,7 @@ function RevenueUpdates() {
                 <div className="bg-indigo-50 w-11 h-11 flex items-center justify-center rounded-md">
                   <i className="fi fi-br-grid text-indigo-500"></i>
                 </div>
-                <div>
+                <div className="flex flex-col gap-3">
                   <p className="text-2xl font-semibold">${totalRevenue}.00</p>
                   <p className="text-sm text-gray-600">Total Earnings</p>
                 </div>
@@ -155,7 +155,7 @@ function RevenueUpdates() {
                 <div>
                   <span className="before:block before:absolute before:-inset-1.5 before:bg-[#008ffb] relative inline-block before:rounded-full"></span>
                 </div>
-                <div>
+                <div className="flex flex-col gap-2">
                   <p className="text-sm text-gray-600">Earnings this month</p>
                   <p className="text-xl font-semibold">${productATotal}</p>
                 </div>
@@ -164,7 +164,7 @@ function RevenueUpdates() {
                 <div>
                   <span className="before:block before:absolute before:-inset-1.5 before:bg-[#00e396] relative inline-block before:rounded-full"></span>
                 </div>
-                <div>
+                <div className="flex flex-col gap-2">
                   <p className="text-sm text-gray-600">Earnings this month</p>
                   <p className="text-xl font-semibold">${productBTotal}</p>
                 </div>

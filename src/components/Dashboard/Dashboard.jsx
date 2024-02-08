@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../NavBar/NavBar";
 import SliderComponent from "../SliderComponent/SliderComponent";
 import RevenueUpdates from "../Graphs/RevenueUpdates/RevenueUpdates";
+import YearlyBreakup from "../Graphs/YearlyBreakup/YearlyBreakup";
 
 function Dashboard() {
   return (
@@ -12,16 +13,17 @@ function Dashboard() {
           <div className="">
             <SliderComponent />
           </div>
-          <div className="flex gap-5 justify-between">
+          <div className="flex gap-5 justify-between mx-2">
             <div>
               <RevenueUpdates />
             </div>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia neque amet unde aliquam explicabo reiciendis
-                consequatur doloribus, odio eos eius?
-              </p>
+            <div className="flex flex-col gap-10">
+              <div>
+                <YearlyBreakup />
+              </div>
+              <div>
+                <YearlyBreakup />
+              </div>
             </div>
           </div>
         </div>
