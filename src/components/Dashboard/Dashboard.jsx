@@ -17,7 +17,11 @@ function Dashboard() {
               <RevenueUpdates />
             </div>
             <div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia neque amet unde aliquam explicabo reiciendis consequatur doloribus, odio eos eius?</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia neque amet unde aliquam explicabo reiciendis
+                consequatur doloribus, odio eos eius?
+              </p>
             </div>
           </div>
         </div>

@@ -116,7 +116,7 @@ function RevenueUpdates() {
               Overview of Profit
             </p>
           </div>
-          <div className="flex justify-end ">
+          <div className="flex justify-end items-center">
             <select
               className="border border-indigo-300 rounded-md text-md outline-none px-4 h-10 w-30"
               onChange={handleYearChange}
@@ -140,7 +140,7 @@ function RevenueUpdates() {
             height={280}
             width={500}
           />
-          <div className="min-w-60">
+          <div className="min-w-54">
             <div className="flex flex-col gap-5">
               <div className="flex gap-4 items-center justify-center">
                 <div className="bg-indigo-50 w-11 h-11 flex items-center justify-center rounded-md">

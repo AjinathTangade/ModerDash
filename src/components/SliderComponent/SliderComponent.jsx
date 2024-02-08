@@ -10,15 +10,41 @@ function SliderComponent() {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 426,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+    ],
   };
 
   return (
     <div className="mt-20">
-      <Slider {...sliderSettings} >
+      <Slider {...sliderSettings}>
         {slidesData.map((slide, index) => (
           <div key={index} className="">
             <div
-              className={`bg-${slide.bgColor} h-44 w-44 flex flex-col items-center justify-center rounded-lg gap-3 mx-2`}
+              className={`bg-${slide.bgColor} h-44 lg:w-44 flex flex-col items-center justify-center rounded-lg gap-3 mx-2`}
             >
               <div>
                 <img src={slide.icon} alt={slide.title} />
