@@ -89,7 +89,6 @@ const sideBarLinksHome = [
     icon: <i className="fi fi-rr-list-music"></i>,
   },
 ];
-
 const slidesData = [
   {
     bgColor: "indigo-100",
@@ -217,6 +216,18 @@ const userNotification = [
     img: "/user-5.jpg",
     title: "John received payment",
     desc:"$230 deducted from account",
+  },
+  {
+    id:6,
+    img: "/user-5.jpg",
+    title: "John received payment",
+    desc:"$230 deducted from account",
+  },
+  {
+    id:7,
+    img: "/user-4.jpg",
+    title: "Jolly completed tasks",
+    desc:"Assign her new tasks",
   },
 ];
 export { sideBarLinks, sideBarLinksHome, slidesData, countryCode, shoppingCard, userProfile, userNotification };

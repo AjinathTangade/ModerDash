@@ -63,7 +63,7 @@ export default function UserProfile() {
             <div>
               <div className="flex flex-col gap-6 py-6">
                 {userProfile.map((profile, index) => (
-                  <Link to="/" key={index}>
+                  <Link to="/" key={index} className="group">
                     <div
                       key={index}
                       className="px-1 flex gap-5 items-center gap-4"
@@ -72,7 +72,7 @@ export default function UserProfile() {
                         <img src={profile.img} alt={profile.title} />
                       </div>
                       <div className="flex">
-                        <span className="text-sm font-semibold text-gray-700 flex flex-col gap-2">
+                        <span className="text-sm font-semibold text-gray-700 flex flex-col gap-2 group-hover:text-indigo-500">
                           {profile.title}
                           <span className="text-xs font-semibold text-gray-400">
                             {profile.desc}

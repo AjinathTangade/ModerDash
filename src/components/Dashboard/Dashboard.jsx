@@ -7,26 +7,8 @@ function Dashboard() {
     <div className="xl:w-5/6">
       <NavBar />
       <div className="relative top-0 xl:top-16">
-        <div className="w-full">
-          <div className="mx-5 xl:w-9/12 xl:mx-auto">
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
-            <SliderComponent />
+        <div className="w-full ">
+          <div className="mx-5 xl:w-9/12 xl:mx-auto ">
             <SliderComponent />
           </div>
         </div>

@@ -41,18 +41,18 @@ export default function Notifications() {
                     5 new
                   </span>
                 </div>
-                <div className="flex flex-col gap-6 mt-5">
+                <div className="flex flex-col gap-1 mt-5 overflow-y-auto h-80">
                   {userNotification.map((profile, ind) => (
-                    <div className="" key={ind}>
+                    <Link className="group" key={ind}>
                       <div
                         
-                        className="px-1 flex gap-5 items-center gap-4"
+                        className="p-3 flex gap-3 items-center gap-4 group-hover:bg-gray-50 group-hover:rounded-lg"
                       >
-                        <div className="bg-gray-100 h-16 w-16 flex items-center justify-center rounded-full">
+                        <div className="bg-gray-100 h-14 w-14 flex items-center justify-center rounded-full">
                           <img src={profile.img} alt={profile.title} className="rounded-full"/>
                         </div>
                         <div className="flex">
-                          <span className="text-sm font-semibold text-gray-700 flex flex-col gap-2">
+                          <span className="text-sm font-semibold text-gray-700 flex flex-col gap-2 group-hover:text-indigo-500">
                             {profile.title}
                             <span className="text-xs font-semibold text-gray-400">
                               {profile.desc}
@@ -60,9 +60,11 @@ export default function Notifications() {
                           </span>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
-                  <div className="flex text-center mt-5">
+                  
+                </div>
+                <div className="flex text-center mt-5">
                     <Link
                       to="/"
                       className="border border-indigo-400 rounded-md p-2 w-full text-indigo-500 text-sm font-medium hover:bg-indigo-500 hover:text-white"
@@ -70,7 +72,6 @@ export default function Notifications() {
                       See All Notifications
                     </Link>
                   </div>
-                </div>
               </div>
             </Menu.Item>
           </Menu.Items>
