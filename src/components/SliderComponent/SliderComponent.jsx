@@ -40,7 +40,7 @@ function SliderComponent() {
                 </h5>
               </div>
             </div>
-           
+            <span className="bg-teal-100 bg-orange-100 bg-rose-100 bg-indigo-50 text-indigo-400 text-indigo-500 text-teal-400 text-teal-500 text-rose-400 text-rose-500 text-orange-400 text-orange-500"></span>
           </div>
         ))}
       </Slider>
