@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactApexChart from "react-apexcharts";
 import "@flaticon/flaticon-uicons/css/all/all.css";
+import Normal from './Normal';
 function MonthlyEarnings() {
   return (
     <div>
-      <div className="shadow-md rounded-lg border border-indigo-100 border-0.5 p-5">
-        <div id="chart-yearly" className="flex jusity-between gap-4">
+      <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5">
+        <div id="chart-yearly" className="flex justify-between gap-4 px-5 pt-5">
           <div className="min-w-36 flex flex-col justify-between">
             <div className="flex flex-col gap-2">
               <h3 className="text-xl font-semibold">Monthly Earnings</h3>
@@ -21,11 +22,13 @@ function MonthlyEarnings() {
             </div>
           </div>
           <div>
-            <div className="w-20 h-20">
-            <i className="fi fi-rr-dollar"></i>
+            <div className="w-14 h-14 bg-blue-500 flex justify-center items-center rounded-full">
+            <i className="fi fi-rr-dollar text-2xl text-white"></i>
             </div>
           </div>
         </div>
+
+        <Normal />
       </div>
     </div>
   )

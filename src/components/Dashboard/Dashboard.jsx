@@ -18,12 +18,13 @@ function Dashboard() {
             <div>
               <RevenueUpdates />
             </div>
-            <div className="flex flex-col gap-6">
-              <div>
-                <YearlyBreakup />
-              </div>
+            <div className="flex flex-col gap-6 w-4/12">
+              
               <div>
                 <MonthlyEarnings />
+              </div>
+              <div>
+                <YearlyBreakup />
               </div>
             </div>
           </div>

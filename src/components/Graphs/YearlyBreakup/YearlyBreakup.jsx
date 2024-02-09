@@ -32,9 +32,9 @@ function YearlyBreakup() {
   });
 
   return (
-    <div>
-      <div className="shadow-md rounded-lg border border-indigo-100 border-0.5 p-5">
-        <div id="chart-yearly" className="flex jusity-between gap-4">
+    <div className="">
+      <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 p-5">
+        <div id="chart-yearly" className="flex justify-between gap-4">
           <div className="min-w-36 flex flex-col justify-between">
             <div className="flex flex-col gap-2">
               <h3 className="text-xl font-semibold">Yearly Breakup</h3>
@@ -56,7 +56,7 @@ function YearlyBreakup() {
                   options={options}
                   series={series}
                   type="donut"
-                  width={190}
+                  width={180}
                 />
               </div>
             </div>

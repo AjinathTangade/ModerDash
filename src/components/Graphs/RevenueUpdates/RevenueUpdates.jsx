@@ -107,7 +107,7 @@ function RevenueUpdates() {
     <div className="w-full">
       <div
         id="chart-fir"
-        className="shadow-md px-5 pt-7 rounded-lg border border-indigo-100 border-0.5"
+        className="shadow-sm px-5 pt-7 rounded-lg border border-indigo-100 border-0.5"
       >
         <div className="flex gap-4 justify-between pb-6">
           <div>
