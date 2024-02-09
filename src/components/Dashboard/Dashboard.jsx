@@ -3,6 +3,7 @@ import NavBar from "../NavBar/NavBar";
 import SliderComponent from "../SliderComponent/SliderComponent";
 import RevenueUpdates from "../Graphs/RevenueUpdates/RevenueUpdates";
 import YearlyBreakup from "../Graphs/YearlyBreakup/YearlyBreakup";
+import MonthlyEarnings from "../MonthlyEarnings/MonthlyEarnings";
 
 function Dashboard() {
   return (
@@ -17,12 +18,12 @@ function Dashboard() {
             <div>
               <RevenueUpdates />
             </div>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-6">
               <div>
                 <YearlyBreakup />
               </div>
               <div>
-                <YearlyBreakup />
+                <MonthlyEarnings />
               </div>
             </div>
           </div>

@@ -28,3 +28,6 @@ i{
 
   /* border: 3px solid rgb(124, 124, 124); */
 }
+.apexcharts-legend.apexcharts-align-center.apx-legend-position-right {
+  display: none;
+}

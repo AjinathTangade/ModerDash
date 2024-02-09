@@ -2,46 +2,35 @@ import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import "@flaticon/flaticon-uicons/css/all/all.css";
 function YearlyBreakup() {
-  const [chartData, setChartData] = useState({
-    series: [42, 47, 52, 58, 65],
-    options: {
-      chart: {
-        width: 380,
-        type: "polarArea",
-      },
-      labels: ["Rose A", "Rose B", "Rose C", "Rose D", "Rose E"],
-      fill: {
-        opacity: 1,
-      },
-      stroke: {
-        width: 1,
-        colors: undefined,
-      },
-      yaxis: {
-        show: false,
-      },
-      legend: {
-        position: "bottom",
-      },
-      plotOptions: {
-        polarArea: {
-          rings: {
-            strokeWidth: 0,
+  const [series, setSeries] = useState([44, 55, 13, 33]);
+  const [options] = useState({
+    chart: {
+      width: 380,
+      type: "donut",
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
           },
-          spokes: {
-            strokeWidth: 0,
+          legend: {
+            show: false,
           },
         },
       },
-      theme: {
-        monochrome: {
-          enabled: true,
-          shadeTo: "light",
-          shadeIntensity: 0.6,
-        },
-      },
+    ],
+    legend: {
+      position: "right",
+      offsetY: 0,
+      height: 230,
     },
   });
+
   return (
     <div>
       <div className="shadow-md rounded-lg border border-indigo-100 border-0.5 p-5">
@@ -60,12 +49,18 @@ function YearlyBreakup() {
               </p>
             </div>
           </div>
-          <ReactApexChart
-            options={chartData.options}
-            series={chartData.series}
-            type="polarArea"
-            width={200}
-          />
+          <div>
+            <div>
+              <div className="chart-wrap">
+                <ReactApexChart
+                  options={options}
+                  series={series}
+                  type="donut"
+                  width={190}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
