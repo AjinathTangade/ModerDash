@@ -4,6 +4,7 @@ import SliderComponent from "../SliderComponent/SliderComponent";
 import RevenueUpdates from "../Graphs/RevenueUpdates/RevenueUpdates";
 import YearlyBreakup from "../Graphs/YearlyBreakup/YearlyBreakup";
 import MonthlyEarnings from "../MonthlyEarnings/MonthlyEarnings";
+import Test from "../MonthlyEarnings/Test";
 
 function Dashboard() {
   return (
@@ -16,10 +17,23 @@ function Dashboard() {
           </div>
           <div className="flex gap-5 justify-between mx-2">
             <div>
-              <RevenueUpdates />
+              <div>
+                <RevenueUpdates />
+              </div>
+              <div>
+                <Test />
+              </div>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse in
+                id eius praesentium repellendus mollitia dolore eum velit
+                tempore repellat!
+              </h1>
+              <div>
+                <MonthlyEarnings />
+              </div>
             </div>
+
             <div className="flex flex-col gap-6 w-4/12">
-              
               <div>
                 <MonthlyEarnings />
               </div>

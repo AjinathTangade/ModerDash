@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import ApexCharts from 'apexcharts';
+import ReactApexChart from 'react-apexcharts';
 
-function Normal() {
+function Test() {
     useEffect(() => {
         const options = {
             series: [
@@ -9,30 +10,35 @@ function Normal() {
                 name: 'series1',
                 data: [31, 40, 28, 51, 42, 109, 100],
               },
-              {
-                name: 'series2',
-                data: [11, 32, 45, 32, 34, 52, 41],
-              },
             ],
             chart: {
-              height: 200,
+              height: 400,
               type: 'area',
             },
             dataLabels: {
-              enabled: false,
+              enabled: true,
             },
             stroke: {
-              curve: 'smooth',
+            curve: 'smooth',
+              lineCap:'round',
             },
-            tooltip: {
-              x: {
-                format: 'dd/MM/yy HH:mm',
-              },
+            yaxis:{
+                show:false,
             },
+            grid:{
+borderColor:"rgba(0, 0, 0, 0)",
+padding:{
+    top:-30,
+    right:0,
+    bottom:-8,
+    left: 12,
+}
+            }
+            
           };
        
     
-        const chart = new ApexCharts(document.querySelector('#chart-normal'), options);
+        const chart = new ApexCharts(document.querySelector('#chart-normal-nor'), options);
         chart.render();
     
         // Cleanup function
@@ -42,9 +48,8 @@ function Normal() {
       }, []);
     
   return (
-    <div id="chart-normal" />
-
+    <div id="chart-normal-nor" />
   )
 }
 
-export default Normal;
+export default Test;

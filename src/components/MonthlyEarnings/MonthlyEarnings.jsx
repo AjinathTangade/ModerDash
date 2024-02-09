@@ -5,7 +5,7 @@ import Normal from './Normal';
 function MonthlyEarnings() {
   return (
     <div>
-      <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5">
+      <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 flex flex-col">
         <div id="chart-yearly" className="flex justify-between gap-4 px-5 pt-5">
           <div className="min-w-36 flex flex-col justify-between">
             <div className="flex flex-col gap-2">
@@ -27,7 +27,6 @@ function MonthlyEarnings() {
             </div>
           </div>
         </div>
-
         <Normal />
       </div>
     </div>
