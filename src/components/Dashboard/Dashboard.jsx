@@ -28,9 +28,9 @@ function Dashboard() {
                 id eius praesentium repellendus mollitia dolore eum velit
                 tempore repellat!
               </h1>
-              <div>
+              {/* <div>
                 <MonthlyEarnings />
-              </div>
+              </div> */}
             </div>
 
             <div className="flex flex-col gap-6 w-4/12">
