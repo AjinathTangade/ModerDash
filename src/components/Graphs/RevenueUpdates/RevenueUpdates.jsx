@@ -10,6 +10,9 @@ function RevenueUpdates() {
       zoom: {
         enabled: false,
       },
+      toolbar: {
+        show: false,
+      },
     },
     plotOptions: {
       bar: {

@@ -17,14 +17,18 @@ function Dashboard() {
             <SliderComponent />
           </div>
           <div className="flex gap-5 justify-between mx-2">
-            <div>
+            <div className="flex flex-col gap-6">
               <div>
                 <RevenueUpdates />
               </div>
-              <div className="mb-20">
-                <EmployeeSalary />
+              <div className="mb-20 grid grid-cols-2">
+                <div>
+                  <EmployeeSalary />
+                </div>
+                <div>
+                {/* <EmployeeSalary /> */}
+                </div>
               </div>
-              
             </div>
 
             <div className="flex flex-col gap-6 w-4/12">
