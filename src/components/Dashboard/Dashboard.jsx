@@ -3,8 +3,9 @@ import NavBar from "../NavBar/NavBar";
 import SliderComponent from "../SliderComponent/SliderComponent";
 import RevenueUpdates from "../Graphs/RevenueUpdates/RevenueUpdates";
 import YearlyBreakup from "../Graphs/YearlyBreakup/YearlyBreakup";
-import MonthlyEarnings from "../MonthlyEarnings/MonthlyEarnings";
-import Test from "../MonthlyEarnings/Test";
+import MonthlyEarnings from "../Graphs/MonthlyEarnings/MonthlyEarnings";
+import Test from "../Graphs/MonthlyEarnings/Test";
+import EmployeeSalary from "../Graphs/Employee Salary/EmployeeSalary";
 
 function Dashboard() {
   return (
@@ -20,17 +21,10 @@ function Dashboard() {
               <div>
                 <RevenueUpdates />
               </div>
-              <div>
-                <Test />
+              <div className="mb-20">
+                <EmployeeSalary />
               </div>
-              <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse in
-                id eius praesentium repellendus mollitia dolore eum velit
-                tempore repellat!
-              </h1>
-              {/* <div>
-                <MonthlyEarnings />
-              </div> */}
+              
             </div>
 
             <div className="flex flex-col gap-6 w-4/12">

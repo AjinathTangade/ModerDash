@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import ReactApexChart from "react-apexcharts";
 import "@flaticon/flaticon-uicons/css/all/all.css";
-import Normal from './Normal';
+import Normal from "./Monthly";
 function MonthlyEarnings() {
   return (
     <div>
@@ -23,14 +23,14 @@ function MonthlyEarnings() {
           </div>
           <div>
             <div className="w-14 h-14 bg-blue-500 flex justify-center items-center rounded-full">
-            <i className="fi fi-rr-dollar text-2xl text-white"></i>
+              <i className="fi fi-rr-dollar text-2xl text-white"></i>
             </div>
           </div>
         </div>
         <Normal />
       </div>
     </div>
-  )
+  );
 }
 
 export default MonthlyEarnings;
