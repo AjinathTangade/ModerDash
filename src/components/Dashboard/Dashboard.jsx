@@ -7,6 +7,7 @@ import MonthlyEarnings from "../Graphs/MonthlyEarnings/MonthlyEarnings";
 import Test from "../Graphs/MonthlyEarnings/Test";
 import EmployeeSalary from "../Graphs/Employee Salary/EmployeeSalary";
 import Customers from "../Graphs/Customers/Customers";
+import Projects from "../Graphs/Projects/Projects";
 
 function Dashboard() {
   return (
@@ -26,12 +27,12 @@ function Dashboard() {
                 <div>
                   <EmployeeSalary />
                 </div>
-                <div className="flex gap-3 justify-between w-full">
+                <div className="flex gap-5 justify-between w-full">
                   <div className="w-6/12">
                     <Customers />
                   </div>
                   <div className="w-6/12">
-
+                    <Projects />
                   </div>
                 </div>
               </div>
