@@ -62,7 +62,7 @@ function EmployeeSalary() {
         axisBorder: {
           show: false,
         },
-        crosshairs: {
+        axisTicks: {
           show: false,
         },
       },

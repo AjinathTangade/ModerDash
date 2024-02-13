@@ -6,6 +6,7 @@ import YearlyBreakup from "../Graphs/YearlyBreakup/YearlyBreakup";
 import MonthlyEarnings from "../Graphs/MonthlyEarnings/MonthlyEarnings";
 import Test from "../Graphs/MonthlyEarnings/Test";
 import EmployeeSalary from "../Graphs/Employee Salary/EmployeeSalary";
+import Customers from "../Graphs/Customers/Customers";
 
 function Dashboard() {
   return (
@@ -21,12 +22,17 @@ function Dashboard() {
               <div>
                 <RevenueUpdates />
               </div>
-              <div className="mb-20 grid grid-cols-2">
+              <div className="mb-20 grid grid-cols-2 gap-5">
                 <div>
                   <EmployeeSalary />
                 </div>
-                <div>
-                {/* <EmployeeSalary /> */}
+                <div className="flex gap-3 justify-between w-full">
+                  <div className="w-6/12">
+                    <Customers />
+                  </div>
+                  <div className="w-6/12">
+
+                  </div>
                 </div>
               </div>
             </div>
