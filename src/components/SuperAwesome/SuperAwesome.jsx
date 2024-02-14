@@ -39,8 +39,8 @@ function SuperAwesome() {
           />
         </div>
         <div className="bg-gray-100 h-12 w-12 flex items-center justify-center rounded-lg">
-          <Link to="/" >
-          <i className="fi fi-rr-comment-alt-dots text-blue-600"></i>
+          <Link to="/">
+            <i className="fi fi-rr-comment-alt-dots text-blue-600"></i>
           </Link>
         </div>
       </div>
