@@ -9,13 +9,14 @@ import EmployeeSalary from "../Graphs/Employee Salary/EmployeeSalary";
 import Customers from "../Graphs/Customers/Customers";
 import Projects from "../Graphs/Projects/Projects";
 import SuperAwesome from "../SuperAwesome/SuperAwesome";
+import BestSellingProducts from "../BestSellingProducts/BestSellingProducts";
 
 function Dashboard() {
   return (
     <div className="xl:w-5/6">
       <NavBar />
       <div className="relative top-0 xl:top-16">
-        <div className="w-full xl:w-9/12 xl:mx-auto flex flex-col gap-10">
+        <div className="w-full xl:w-9/12 xl:mx-auto flex flex-col gap-6">
           <div className="">
             <SliderComponent />
           </div>
@@ -50,6 +51,9 @@ function Dashboard() {
               </div>
               <div>
                 <YearlyBreakup />
+              </div>
+              <div>
+                <BestSellingProducts />
               </div>
             </div>
           </div>
