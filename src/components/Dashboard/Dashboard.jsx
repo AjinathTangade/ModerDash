@@ -15,7 +15,7 @@ function Dashboard() {
   return (
     <div className="xl:w-5/6">
       <NavBar />
-      <div className="relative top-0 xl:top-16">
+      <div className="relative top-0 xl:top-14">
         <div className="w-full xl:w-9/12 xl:mx-auto flex flex-col gap-6">
           <div className="">
             <SliderComponent />
