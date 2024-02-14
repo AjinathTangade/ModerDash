@@ -1,12 +1,12 @@
 import React from "react";
-
+import { topPerformers } from "@/data/data";
 function TopPerformers() {
   return (
     <div>
       <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 p-5 flex flex-col gap-11">
         <div className="flex flex-col gap-5">
           <div>
-            <h4 className="text-md font-semibold leading">Top Performers</h4>
+            <h4 className="text-xl font-semibold leading">Top Performers</h4>
             <p className="text-sm text-gray-600">Best Employees</p>
           </div>
           <div>
@@ -19,50 +19,71 @@ function TopPerformers() {
                         <tr>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                            className="px-6 py-3 text-start text-xs font-semibold text-gray-700 uppercase"
                           >
-                            Name
+                            Assigned
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                            className="px-6 py-3 text-start text-xs font-semibold text-gray-700 uppercase"
                           >
-                            Age
+                            Project
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                            className="px-6 py-3 text-start text-xs font-semibold text-gray-700 uppercase"
                           >
-                            Address
+                            Task
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase"
+                            className="px-6 py-3 text-start text-xs font-semibold text-gray-700 uppercase"
                           >
-                            Action
+                            Priority
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-6 py-3 text-start text-xs font-semibold text-gray-700 uppercase"
+                          >
+                            Budget
                           </th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                        <tr className="hover:bg-gray-100 dark:hover:bg-gray-700">
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
-                            John Brown
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
-                            45
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
-                            New York No. 1 Lake Park
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                            <button
-                              type="button"
-                              className="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            >
-                              Delete
-                            </button>
-                          </td>
-                        </tr>
+                        {topPerformers.map((profile, index) => (
+                          <tr
+                            className="hover:bg-gray-100 dark:hover:bg-gray-700"
+                            key={index}
+                          >
+                            <td className="px-6 py-3 whitespace-nowrap text-sm font-semibold text-gray-700 dark:text-gray-200">
+                              <div className="flex gap-5 items-center">
+                                <div>
+                                  <img
+                                    src={profile.img}
+                                    alt={profile.role}
+                                    className="h-14 w-14 rounded-full"
+                                  />
+                                </div>
+                                <div>
+                                  {profile.name}
+                                  <p className="text-gray-500 font-normal text-sm">{profile.role}</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
+                              {profile.project}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
+                              {profile.task}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
+                              {profile.prority}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
+                              {profile.budget}
+                            </td>
+                          </tr>
+                        ))}
                       </tbody>
                     </table>
                   </div>
