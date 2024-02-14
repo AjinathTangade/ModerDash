@@ -33,8 +33,8 @@ function BestSellingProducts() {
                   </h5>
                 </div>
               </div>
-              <div class="w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
-                <div class="bg-blue-400 h-1 rounded-full dark:bg-white w-[90px] "></div>
+              <div className="w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+                <div className="bg-blue-400 h-1 rounded-full dark:bg-white w-[90px]"></div>
               </div>
             </div>
           </div>

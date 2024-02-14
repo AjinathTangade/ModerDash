@@ -144,90 +144,142 @@ const countryCode = [
     icon: "/icon-flag-sa.svg",
     title: "عربي (Arabic)",
   },
-  
 ];
 const shoppingCard = [
   {
-    id:1,
+    id: 1,
     img: "/product-1.jpg",
     title: "Supreme toys cooker",
-    desc:"Kitchenware Item",
+    desc: "Kitchenware Item",
   },
   {
-    id:2,
+    id: 2,
     img: "/product-2.jpg",
     title: "Toys cooker supreme",
-    desc:"Kitchenware Item",
+    desc: "Kitchenware Item",
   },
   {
-    id:3,
+    id: 3,
     img: "/product-3.jpg",
     title: "Cooker toys supreme",
-    desc:"Kitchenware Item",
+    desc: "Kitchenware Item",
   },
 ];
 const userProfile = [
   {
-    id:1,
+    id: 1,
     img: "/icon-account.svg",
     title: "My Profile",
-    desc:"Account Settings",
+    desc: "Account Settings",
   },
   {
-    id:2,
+    id: 2,
     img: "/icon-inbox.svg",
     title: "My Inbox",
-    desc:"Messages & Emails",
+    desc: "Messages & Emails",
   },
   {
-    id:3,
+    id: 3,
     img: "/icon-tasks.svg",
     title: "My Task",
-    desc:"To-do and Daily Tasks",
+    desc: "To-do and Daily Tasks",
   },
 ];
 const userNotification = [
   {
-    id:1,
+    id: 1,
     img: "/user-1.jpg",
     title: "Roman Joined the Team!",
-    desc:"Congratulate him",
+    desc: "Congratulate him",
   },
   {
-    id:2,
+    id: 2,
     img: "/user-2.jpg",
     title: "New message",
-    desc:"Salma sent you new message",
+    desc: "Salma sent you new message",
   },
   {
-    id:3,
+    id: 3,
     img: "/user-3.jpg",
     title: "Bianca sent payment",
-    desc:"Check your earnings",
+    desc: "Check your earnings",
   },
   {
-    id:4,
+    id: 4,
     img: "/user-4.jpg",
     title: "Jolly completed tasks",
-    desc:"Assign her new tasks",
+    desc: "Assign her new tasks",
   },
   {
-    id:5,
+    id: 5,
     img: "/user-5.jpg",
     title: "John received payment",
-    desc:"$230 deducted from account",
+    desc: "$230 deducted from account",
   },
   {
-    id:6,
+    id: 6,
     img: "/user-5.jpg",
     title: "John received payment",
-    desc:"$230 deducted from account",
+    desc: "$230 deducted from account",
   },
   {
-    id:7,
+    id: 7,
     img: "/user-4.jpg",
     title: "Jolly completed tasks",
-    desc:"Assign her new tasks",
+    desc: "Assign her new tasks",
   },
 ];
-export { sideBarLinks, sideBarLinksHome, slidesData, countryCode, shoppingCard, userProfile, userNotification };
+const topPerformers = [
+  {
+    id: 1,
+    img: "/user-1.jpg",
+    title: "Roman Joined the Team!",
+    desc: "Congratulate him",
+  },
+  {
+    id: 2,
+    img: "/user-2.jpg",
+    title: "New message",
+    desc: "Salma sent you new message",
+  },
+  {
+    id: 3,
+    img: "/user-3.jpg",
+    title: "Bianca sent payment",
+    desc: "Check your earnings",
+  },
+  {
+    id: 4,
+    img: "/user-4.jpg",
+    title: "Jolly completed tasks",
+    desc: "Assign her new tasks",
+  },
+  {
+    id: 5,
+    img: "/user-5.jpg",
+    title: "John received payment",
+    desc: "$230 deducted from account",
+  },
+  {
+    id: 6,
+    img: "/user-5.jpg",
+    title: "John received payment",
+    desc: "$230 deducted from account",
+  },
+  {
+    id: 7,
+    img: "/user-4.jpg",
+    title: "Jolly completed tasks",
+    desc: "Assign her new tasks",
+  },
+];
+export {
+  sideBarLinks,
+  sideBarLinksHome,
+  slidesData,
+  countryCode,
+  shoppingCard,
+  userProfile,
+  userNotification,
+  topPerformers,
+};

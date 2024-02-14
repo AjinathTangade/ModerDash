@@ -10,6 +10,7 @@ import Customers from "../Graphs/Customers/Customers";
 import Projects from "../Graphs/Projects/Projects";
 import SuperAwesome from "../SuperAwesome/SuperAwesome";
 import BestSellingProducts from "../BestSellingProducts/BestSellingProducts";
+import TopPerformers from "../TopPerformers/TopPerformers";
 
 function Dashboard() {
   return (
@@ -25,7 +26,7 @@ function Dashboard() {
               <div>
                 <RevenueUpdates />
               </div>
-              <div className="mb-20 grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-2 gap-5">
                 <div>
                   <EmployeeSalary />
                 </div>
@@ -56,6 +57,9 @@ function Dashboard() {
                 <BestSellingProducts />
               </div>
             </div>
+          </div>
+          <div className="mx-2 mb-20">
+            <TopPerformers />
           </div>
         </div>
       </div>
