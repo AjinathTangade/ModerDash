@@ -11,6 +11,7 @@ import Projects from "../Graphs/Projects/Projects";
 import SuperAwesome from "../SuperAwesome/SuperAwesome";
 import BestSellingProducts from "../BestSellingProducts/BestSellingProducts";
 import TopPerformers from "../TopPerformers/TopPerformers";
+import Calendar from "../APPS/Calendar/Calendar";
 
 function Dashboard() {
   return (
@@ -60,6 +61,9 @@ function Dashboard() {
           </div>
           <div className="mx-2 mb-20">
             <TopPerformers />
+          </div>
+          <div>
+            <Calendar/>
           </div>
         </div>
       </div>
