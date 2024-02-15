@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 
-*{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
-i{
-    display: flex;
+
+i {
+  display: flex;
 }
 
 
@@ -28,6 +29,53 @@ i{
 
   /* border: 3px solid rgb(124, 124, 124); */
 }
+
 .apexcharts-legend.apexcharts-align-center.apx-legend-position-right {
   display: none;
+}
+
+.fc-theme-standard td {
+  border: 1px solid #bec6d43d;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+  border-left: 1px solid #bec6d43d;
+  border-top: 1px solid #bec6d43d;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: 1px solid #bec6d43d;
+  color: #0c244d;
+}
+
+.fc-dayGridMonth-button:focus-within,
+.fc-timeGridWeek-button:focus-within,
+.fc-timeGridDay-button:focus-within,
+.fc-prev-button:focus-within,
+.fc-next-button:focus-within {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+.fc-dayGridMonth-button,
+.fc-timeGridWeek-button,
+.fc-timeGridDay-button,
+.fc-prev-button,
+.fc-next-button,
+.fc-today-button {
+  background-color: #3b83f600 !important;
+  border: 1px solid #3b82f6 !important;
+  outline: none !important;
+  color: #3b82f6 !important;
+}
+
+.fc-dayGridMonth-button:focus,
+.fc-timeGridWeek-button:focus,
+.fc-timeGridDay-button:focus,
+.fc-prev-button:focus,
+.fc-next-button:focus,
+.fc-today-button:focus {
+  outline: none !important;
+  box-shadow: unset !important;
 }
