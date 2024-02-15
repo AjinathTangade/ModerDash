@@ -4,14 +4,13 @@ import SliderComponent from "../SliderComponent/SliderComponent";
 import RevenueUpdates from "../Graphs/RevenueUpdates/RevenueUpdates";
 import YearlyBreakup from "../Graphs/YearlyBreakup/YearlyBreakup";
 import MonthlyEarnings from "../Graphs/MonthlyEarnings/MonthlyEarnings";
-import Test from "../Graphs/MonthlyEarnings/Test";
 import EmployeeSalary from "../Graphs/Employee Salary/EmployeeSalary";
 import Customers from "../Graphs/Customers/Customers";
 import Projects from "../Graphs/Projects/Projects";
 import SuperAwesome from "../SuperAwesome/SuperAwesome";
 import BestSellingProducts from "../BestSellingProducts/BestSellingProducts";
 import TopPerformers from "../TopPerformers/TopPerformers";
-import Calendar from "../APPS/Calendar/Calendar";
+// import Calendar from "../APPS/Calendar/Calendar";
 
 function Dashboard() {
   return (
@@ -62,9 +61,9 @@ function Dashboard() {
           <div className="mx-2 mb-20">
             <TopPerformers />
           </div>
-          <div>
+          {/* <div>
             <Calendar/>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

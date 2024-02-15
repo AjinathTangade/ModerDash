@@ -3,89 +3,89 @@ import React from "react";
 const sideBarLinks = [
   {
     label: "Calendar",
-    href: "/link1",
+    href: "/calendar",
     icon: <i className="fi fi-rr-calendar-day"></i>,
   },
   {
     label: "Kanban",
-    href: "/link2",
+    href: "/calendar",
     icon: <i className="fi fi-rr-square-kanban"></i>,
   },
   {
     label: "Chat",
-    href: "/link3",
+    href: "/calendar",
     icon: <i className="fi fi-rr-comment-alt"></i>,
   },
   {
     label: "Email",
-    href: "/link4",
+    href: "/calendar",
     icon: <i className="fi fi-rr-envelope"></i>,
   },
   {
     label: "Notes",
-    href: "/link5",
+    href: "/calendar",
     icon: <i className="fi fi-rr-memo"></i>,
   },
   {
     label: "Contact Table",
-    href: "/link6",
+    href: "/calendar",
     icon: <i className="fi fi-rr-phone-call"></i>,
   },
   {
     label: "Contact List",
-    href: "/link7",
+    href: "/calendar",
     icon: <i className="fi fi-rr-list-timeline"></i>,
   },
   {
     label: "Invoice",
-    href: "/link8",
+    href: "/calendar",
     icon: <i className="fi fi-rr-file-invoice"></i>,
   },
   {
     label: "User Profile",
-    href: "/link9",
+    href: "/calendar",
     icon: <i className="fi fi-rr-circle-user"></i>,
   },
   {
     label: "Blog",
-    href: "/link10",
+    href: "/calendar",
     icon: <i className="fi fi-rr-blog-pencil"></i>,
   },
   {
     label: "Ecommerce",
-    href: "/link11",
+    href: "/calendar",
     icon: <i className="fi fi-rs-basket-shopping-simple"></i>,
   },
 ];
 const sideBarLinksHome = [
   {
     label: "Modern",
-    href: "/link1",
+    href: "/calendar",
     icon: <i className="fi fi-rs-settings"></i>,
   },
   {
     label: "eCommerce",
-    href: "/link2",
+    href: "/calendar",
     icon: <i className="fi fi-rs-cart-shopping-fast"></i>,
   },
   {
     label: "NFT",
-    href: "/link3",
+    href: "/calendar",
     icon: <i className="fi fi-rr-usd-circle"></i>,
   },
   {
     label: "Crypto",
-    href: "/link4",
+    href: "/calendar",
     icon: <i className="fi fi-br-settings"></i>,
   },
   {
     label: "General",
-    href: "/link5",
+    href: "/calendar",
     icon: <i className="fi fi-sr-heart-rate"></i>,
   },
   {
     label: "Music",
-    href: "/link6",
+    href: "/calendar",
     icon: <i className="fi fi-rr-list-music"></i>,
   },
 ];
