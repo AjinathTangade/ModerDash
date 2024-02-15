@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { sideBarLinks, sideBarLinksHome } from "@/data/data";
 import "@flaticon/flaticon-uicons/css/all/all.css";
-import { NavLink } from "react-router-dom";
 
 function SideBar() {
   return (
@@ -27,9 +26,9 @@ function SideBar() {
                   className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
                 >
                   <span>{link.icon}</span>
-                  <NavLink href={link.href} className="text-sm font-medium">
+                  <Link to={link.href} className="text-sm font-medium">
                     {link.label}
-                  </NavLink>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -42,9 +41,9 @@ function SideBar() {
                   className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
                 >
                   <span>{link.icon}</span>
-                  <NavLink href={link.href} className="text-sm font-medium">
+                  <Link to={link.href} className="text-sm font-medium">
                     {link.label}
-                  </NavLink>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -56,9 +55,9 @@ function SideBar() {
                   className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
                 >
                   <span>{link.icon}</span>
-                  <NavLink href={link.href} className="text-sm font-medium">
+                  <Link to={link.href} className="text-sm font-medium">
                     {link.label}
-                  </NavLink>
+                  </Link>
                 </li>
               ))}
             </ul>

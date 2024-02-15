@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
+// import NavBar from "../NavBar/NavBar";
 import SliderComponent from "../SliderComponent/SliderComponent";
 import RevenueUpdates from "../Graphs/RevenueUpdates/RevenueUpdates";
 import YearlyBreakup from "../Graphs/YearlyBreakup/YearlyBreakup";
@@ -15,7 +15,7 @@ import TopPerformers from "../TopPerformers/TopPerformers";
 function Dashboard() {
   return (
     <div className="xl:w-5/6">
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="relative top-0 xl:top-14">
         <div className="w-full xl:w-9/12 xl:mx-auto flex flex-col gap-6">
           <div className="">
