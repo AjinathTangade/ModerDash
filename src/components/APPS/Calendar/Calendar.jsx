@@ -30,6 +30,8 @@ function Calendar() {
   };
 
   return (
+
+    <div>
     <div className="flex flex-col gap-10 ">
       <div className="px-5 bg-indigo-50 rounded-lg">
         <div className="flex justify-between items-center">
@@ -69,6 +71,7 @@ function Calendar() {
           }}
         />
       </div>
+    </div>
     </div>
   );
 }
