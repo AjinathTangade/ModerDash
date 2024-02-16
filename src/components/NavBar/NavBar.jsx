@@ -55,7 +55,7 @@ function NavBar() {
           </span>
           <div className="flex items-center justify-between w-11/12">
             <div className="flex items-center hidden xl:block">
-              <div className="flex space-x-4 ">
+              <div className="flex space-x-8">
                 <Link to="/" className="text-sm text-gray-600">
                   Home
                 </Link>

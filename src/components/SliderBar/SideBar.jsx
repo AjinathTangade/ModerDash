@@ -54,8 +54,32 @@ function SideBar() {
                 </li>
               ))}
             </ul>
-            
           </nav>
+        </div>
+      </div>
+      <div className="fixed h-24 bottom-0 z-20 bg-white w-80 flex justify-center items-center ">
+        <div className="w-52 h-16 bg-indigo-50 flex justify-center items-center rounded-lg">
+          <div className="flex gap-4 items-center justify-center">
+            <div className="">
+              <img
+                src="/user-1.jpg"
+                alt="logo-sidebar"
+                className="h-11 w-11 rounded-full"
+              />
+            </div>
+            <div>
+              <h4 className="text-sm font-medium">Mathew</h4>
+              <p className="text-gray-500 font-normal text-sm">Designer</p>
+            </div>
+            <div>
+              <Link
+                to="/"
+                className="text-2xl font-bold flex gap-2 items-center text-red-500"
+              >
+                <i class="fi fi-rr-power text-indigo-600 text-lg"></i>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

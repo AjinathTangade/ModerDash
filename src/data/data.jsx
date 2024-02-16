@@ -56,6 +56,21 @@ const sideBarLinks = [
     href: "/calendar",
     icon: <i className="fi fi-rs-basket-shopping-simple"></i>,
   },
+  {
+    label: "Contact List",
+    href: "/calendar",
+    icon: <i className="fi fi-rr-list-timeline"></i>,
+  },
+  {
+    label: "Email",
+    href: "/calendar",
+    icon: <i className="fi fi-rr-envelope"></i>,
+  },
+  {
+    label: "Chat",
+    href: "/calendar",
+    icon: <i className="fi fi-rr-comment-alt"></i>,
+  },
 ];
 const sideBarLinksHome = [
   {
