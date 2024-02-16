@@ -61,9 +61,6 @@ function Dashboard() {
           <div className="mx-2 mb-20">
             <TopPerformers />
           </div>
-          {/* <div>
-            <Calendar/>
-          </div> */}
         </div>
       </div>
     </div>

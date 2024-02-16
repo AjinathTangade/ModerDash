@@ -66,7 +66,9 @@ function TopPerformers() {
                                 </div>
                                 <div>
                                   {profile.name}
-                                  <p className="text-gray-500 font-normal text-sm">{profile.role}</p>
+                                  <p className="text-gray-500 font-normal text-sm">
+                                    {profile.role}
+                                  </p>
                                 </div>
                               </div>
                             </td>

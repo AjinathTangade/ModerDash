@@ -28,12 +28,12 @@ const sideBarLinks = [
   },
   {
     label: "Contact Table",
-    href: "/calendar",
+    href: "/ContactTable",
     icon: <i className="fi fi-rr-phone-call"></i>,
   },
   {
     label: "Contact List",
-    href: "/calendar",
+    href: "/ContactTable",
     icon: <i className="fi fi-rr-list-timeline"></i>,
   },
   {
