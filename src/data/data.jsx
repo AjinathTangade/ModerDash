@@ -60,32 +60,32 @@ const sideBarLinks = [
 const sideBarLinksHome = [
   {
     label: "Modern",
-    href: "/calendar",
+    href: "/dashboard",
     icon: <i className="fi fi-rs-settings"></i>,
   },
   {
     label: "eCommerce",
-    href: "/calendar",
+    href: "/dashboard",
     icon: <i className="fi fi-rs-cart-shopping-fast"></i>,
   },
   {
     label: "NFT",
-    href: "/calendar",
+    href: "/dashboard",
     icon: <i className="fi fi-rr-usd-circle"></i>,
   },
   {
     label: "Crypto",
-    href: "/calendar",
+    href: "/dashboard",
     icon: <i className="fi fi-br-settings"></i>,
   },
   {
     label: "General",
-    href: "/calendar",
+    href: "/dashboard",
     icon: <i className="fi fi-sr-heart-rate"></i>,
   },
   {
     label: "Music",
-    href: "/calendar",
+    href: "/dashboard",
     icon: <i className="fi fi-rr-list-music"></i>,
   },
 ];

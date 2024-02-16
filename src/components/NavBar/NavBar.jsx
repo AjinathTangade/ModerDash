@@ -45,14 +45,15 @@ function NavBar() {
         </div>
 
         <nav
-          className={`fixed top-0 bg-white min-w-full h-16 p-5 z-10 flex items-center gap-4 invisible xl:visible ${
-            scrolling ? "drop-shadow-md" : ""
+          className={`fixed top-0 bg-white w-5/6 right-[-19px] border-l border-landigo-500 h-20 px-5 z-10 flex items-center gap-4 invisible xl:visible ${
+            scrolling ? "border-b" : ""
           }`}
+
         >
           <span>
             <i className="fi fi-rr-search"></i>
           </span>
-          <div className="flex items-center justify-between w-9/12">
+          <div className="flex items-center justify-between w-11/12">
             <div className="flex items-center hidden xl:block">
               <div className="flex space-x-4 ">
                 <Link to="/" className="text-sm text-gray-600">

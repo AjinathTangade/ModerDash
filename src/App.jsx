@@ -7,14 +7,18 @@ import NavBar from "./components/NavBar/NavBar";
 function App() {
   return (
     <>
-      <div className="xl:flex overflow-hidden px-5">
+      <div className="xl:flex overflow-hidden px-5 xl:justify-between">
+       
         <SideBar />
         <NavBar />
+        
+       
         {/* <Dashboard /> */}
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/calendar" element={<Calendar />} />
         </Routes>
+       
       </div>
     </>
   );
