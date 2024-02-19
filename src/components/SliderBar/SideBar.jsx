@@ -28,30 +28,32 @@ function SideBar() {
             <ul className="my-5">
               <h3 className="font-semibold pb-3">Home</h3>
               {sideBarLinksHome.map((link, index) => (
+                <Link to={link.href} className="text-sm font-medium" key={index}>
                 <li
                   key={index}
                   className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
                 >
                   <span>{link.icon}</span>
-                  <Link to={link.href} className="text-sm font-medium">
                     {link.label}
-                  </Link>
                 </li>
+                </Link>
               ))}
             </ul>
 
             <ul className="my-5">
               <h3 className="font-semibold pb-3">Apps</h3>
               {sideBarLinks.map((link, index) => (
+                <Link to={link.href} className="text-sm font-medium" key={index}>
                 <li
-                  key={index}
+                  
                   className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
                 >
                   <span>{link.icon}</span>
-                  <Link to={link.href} className="text-sm font-medium">
+                  
                     {link.label}
-                  </Link>
+                  
                 </li>
+                </Link>
               ))}
             </ul>
           </nav>
@@ -76,7 +78,7 @@ function SideBar() {
                 to="/"
                 className="text-2xl font-bold flex gap-2 items-center text-red-500"
               >
-                <i class="fi fi-rr-power text-indigo-600 text-lg"></i>
+                <i className="fi fi-rr-power text-indigo-600 text-lg"></i>
               </Link>
             </div>
           </div>
