@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Popup from "./Popup";
-
+import "@flaticon/flaticon-uicons/css/all/all.css";
 function Kanban() {
   const [notes, setNotes] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
@@ -81,7 +81,11 @@ function Kanban() {
             </div>
           </div>
         </div>
-        <div className=" flex justify-end ">
+
+        <div className="flex justify-between items-center">
+          <div>
+            <h3 className="text-xl font-medium">Improving Work Processes</h3>
+          </div>
           <button
             onClick={handleAddNote}
             className="bg-blue-500 p-3 text-white rounded-lg text-sm font-medium"
@@ -100,28 +104,43 @@ function Kanban() {
               setNewNoteName={setNewNoteName}
             />
           )}
-          {notes.map((note, index) => (
-            <div key={index}>
-              <p>{note.content}</p>
-              <button onClick={() => handleEdit(index)}>Edit</button>
-              <button onClick={() => handleDelete(index)}>Delete</button>
-              <input
-                type="text"
-                placeholder="Add Task"
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    handleAddTask(index, e.target.value);
-                    e.target.value = "";
-                  }
-                }}
-              />
-              <ul>
-                {note.tasks.map((task, taskIndex) => (
-                  <li key={taskIndex}>{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="flex flex-wrap gap-10 justify-center">
+            {notes.map((note, index) => (
+              <div
+                key={index}
+                className="w-60 border border-indigo-300 rounded-lg p-3 flex flex-col gap-3"
+              >
+                <div className="flex justify-between">
+                  <h3 className="text-md font-medium">{note.content}</h3>
+                  <div className="flex gap-4">
+                  <button className="font-medium text-sm text-blue-600 hover:text-blue-200" onClick={() => handleEdit(index)}><i className="fi fi-rr-edit"></i></button>
+                  <button className="font-medium text-md text-red-600 hover:text-red-200" onClick={() => handleDelete(index)}><i className="fi fi-rs-trash"></i></button>
+                </div>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    className="w-full p-2 border border-indigo-300 rounded-md outline-none"
+                    placeholder="Add Task"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleAddTask(index, e.target.value);
+                        e.target.value = "";
+                      }
+                    }}
+                  />
+                </div>
+                
+                <div>
+                  <ul>
+                    {note.tasks.map((task, taskIndex) => (
+                      <li key={taskIndex}>{task}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
