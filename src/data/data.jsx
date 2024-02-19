@@ -8,7 +8,7 @@ const sideBarLinks = [
   },
   {
     label: "Kanban",
-    href: "/dashboard",
+    href: "/kanban",
     icon: <i className="fi fi-rr-square-kanban"></i>,
   },
   {
