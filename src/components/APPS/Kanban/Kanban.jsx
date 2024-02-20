@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Popup from "./Popup";
-import "@flaticon/flaticon-uicons/css/all/all.css";
+
 function Kanban() {
   const [notes, setNotes] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
@@ -9,10 +9,10 @@ function Kanban() {
   useEffect(() => {
     // Initialize with four default notes, each with the same content
     const defaultNoteContent = [
-      { content: "Note 1", tasks: [] },
-      { content: "Note 2", tasks: [] },
-      { content: "Note 3", tasks: [] },
-      { content: "Note 4", tasks: [] },
+      { content: "Todo", tasks: [], color: "#eaeff4" },
+      { content: "In Progress", tasks: [], color: "#ecf8ff" },
+      { content: "Pending", tasks: [], color: "#ebf3fe" },
+      { content: "Done", tasks: [], color: "#e6fffa" },
     ];
     setNotes(defaultNoteContent);
   }, []);
@@ -22,12 +22,17 @@ function Kanban() {
   };
 
   const handleConfirmAddNote = (inputValue, editIndex) => {
-    // Create a new note object with the provided note name
+    // Generate a random color
+    const colors = ["#eaeff4", "#ecf8ff", "#ebf3fe", "#e6fffa"]; // Define available colors
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  
+    // Create a new note object with the provided note name and random color
     const newNote = {
-      content: inputValue.trim() !== "" ? inputValue : "New Note", // Use the provided note name or default to "New Note"
+      content: inputValue.trim() !== "" ? inputValue : "New Note",
       tasks: [],
+      color: randomColor,
     };
-
+  
     if (editIndex !== null && editIndex !== undefined) {
       // If editing an existing note, replace the note at the specified index
       const updatedNotes = [...notes];
@@ -37,7 +42,7 @@ function Kanban() {
       // If adding a new note, append the new note to the existing notes
       setNotes([...notes, newNote]);
     }
-
+  
     setShowPopup(false); // Close the popup
   };
 
@@ -67,6 +72,21 @@ function Kanban() {
     setNotes(updatedNotes);
   };
 
+  // Calculate the height of the note based on its content
+  const calculateNoteHeight = (noteIndex) => {
+    // Get the reference to the note content element
+    const noteContentElement = noteContentRefs.current[noteIndex];
+    //console.log(noteContentElement)
+    // Check if the note content element exists before accessing its scrollHeight
+    if (noteContentElement) {
+      return noteContentElement.scrollHeight;
+    }
+    return 0; // Return 0 if the note content element is undefined
+  };
+
+  // Refs to store references to note content elements
+  const noteContentRefs = useRef([]);
+
   return (
     <div className="w-full xl:w-7/12 xl:mx-auto mt-32 mb-20">
       <div className="flex flex-col gap-10 ">
@@ -81,11 +101,7 @@ function Kanban() {
             </div>
           </div>
         </div>
-
-        <div className="flex justify-between items-center">
-          <div>
-            <h3 className="text-xl font-medium">Improving Work Processes</h3>
-          </div>
+        <div className=" flex justify-end ">
           <button
             onClick={handleAddNote}
             className="bg-blue-500 p-3 text-white rounded-lg text-sm font-medium"
@@ -108,19 +124,21 @@ function Kanban() {
             {notes.map((note, index) => (
               <div
                 key={index}
-                className="w-60 border border-indigo-300 rounded-lg p-3 flex flex-col gap-3"
+                className=""
+                style={{ height: calculateNoteHeight(index), backgroundColor: note.color}}
               >
+                 <div className="rounded-lg p-3 flex flex-col gap-3 w-60 " style={{ backgroundColor: note.color}}>
                 <div className="flex justify-between">
                   <h3 className="text-md font-medium">{note.content}</h3>
                   <div className="flex gap-4">
-                  <button className="font-medium text-sm text-blue-600 hover:text-blue-200" onClick={() => handleEdit(index)}><i className="fi fi-rr-edit"></i></button>
-                  <button className="font-medium text-md text-red-600 hover:text-red-200" onClick={() => handleDelete(index)}><i className="fi fi-rs-trash"></i></button>
-                </div>
+                    <button className="font-medium text-sm text-blue-600 hover:text-blue-200" onClick={() => handleEdit(index)}><i className="fi fi-rr-edit"></i></button>
+                    <button className="font-medium text-md text-red-600 hover:text-red-200" onClick={() => handleDelete(index)}><i className="fi fi-rs-trash"></i></button>
+                  </div>
                 </div>
                 <div>
                   <input
                     type="text"
-                    className="w-full p-2 border border-indigo-300 rounded-md outline-none"
+                    className="w-full p-2 border border-indigo-300 rounded-md outline-none placeholder:text-sm"
                     placeholder="Add Task"
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
@@ -130,13 +148,13 @@ function Kanban() {
                     }}
                   />
                 </div>
-                
                 <div>
-                  <ul>
+                  <ul ref={(ref) => noteContentRefs.current[index] = ref}>
                     {note.tasks.map((task, taskIndex) => (
                       <li key={taskIndex}>{task}</li>
                     ))}
                   </ul>
+                </div>
                 </div>
               </div>
             ))}
