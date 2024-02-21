@@ -110,16 +110,16 @@ function RevenueUpdates() {
     <div className="w-full">
       <div
         id="chart-fir"
-        className="shadow-sm px-5 pt-7 rounded-lg border border-indigo-100 border-0.5"
+        className="shadow-sm lg:px-5 pt-7 rounded-lg border border-indigo-100 border-0.5"
       >
         <div className="flex gap-4 justify-between pb-6">
-          <div>
+          <div className="pl-3 lg:pl-0">
             <h3 className="text-xl font-semibold">Revenue Updates</h3>
             <p className="text-sm font-base text-gray-400 ">
               Overview of Profit
             </p>
           </div>
-          <div className="flex justify-end items-center">
+          <div className="flex justify-end items-center pr-3 lg:pr-0">
             <select
               className="border border-indigo-300 rounded-md text-md outline-none px-4 h-10 w-30"
               onChange={handleYearChange}
@@ -135,22 +135,24 @@ function RevenueUpdates() {
           </div>
         </div>
 
-        <div className="flex gap-4">
-          <ReactApexChart
-            options={chartOptions}
-            series={series}
-            type="rangeBar"
-            height={280}
-            width={500}
-          />
-          <div className="min-w-54">
-            <div className="flex flex-col gap-5">
+        <div className="lg:flex gap-4 pb-10 lg:p-0">
+          <div className="chart-container lg:w-9/12	">
+            <ReactApexChart
+              options={chartOptions}
+              series={series}
+              type="rangeBar"
+              height={280}
+              
+            />
+          </div>
+          <div className="lg:min-w-54">
+            <div className="flex flex-wrap px-2 justify-center lg:flex-col gap-5">
               <div className="flex gap-4 items-center justify-center">
                 <div className="bg-indigo-50 w-11 h-11 flex items-center justify-center rounded-md">
                   <i className="fi fi-br-grid text-indigo-500"></i>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className="text-2xl font-semibold">${totalRevenue}.00</p>
+                  <p className=" text-xl lg:text-2xl font-semibold">${totalRevenue}.00</p>
                   <p className="text-sm text-gray-600">Total Earnings</p>
                 </div>
               </div>

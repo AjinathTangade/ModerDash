@@ -17,7 +17,7 @@ function Popup({ isOpen, onClose, onConfirm, onCancel, initialContent }) {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full flex items-center bg-black justify-center z-20 ${
+      className={`fixed top-0 left-0 w-full h-full flex items-center bg-black justify-center z-30 ${
         isOpen ? "" : "hidden"
       }`}
     >

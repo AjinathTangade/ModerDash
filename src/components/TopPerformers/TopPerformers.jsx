@@ -57,7 +57,7 @@ function TopPerformers() {
                           >
                             <td className="px-6 py-3 whitespace-nowrap text-sm font-semibold text-gray-700 dark:text-gray-200">
                               <div className="flex gap-5 items-center">
-                                <div>
+                                <div className="h-14 w-14">
                                   <img
                                     src={profile.img}
                                     alt={profile.role}

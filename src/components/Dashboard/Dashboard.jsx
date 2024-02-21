@@ -21,12 +21,12 @@ function Dashboard() {
           <div className="">
             <SliderComponent />
           </div>
-          <div className="flex gap-5 justify-between mx-2">
+          <div className="lg:flex gap-5 justify-between mx-2">
             <div className="flex flex-col gap-6">
               <div>
                 <RevenueUpdates />
               </div>
-              <div className="grid grid-cols-2 gap-5">
+              <div className="flex flex-col lg:grid grid-cols-2 gap-5">
                 <div>
                   <EmployeeSalary />
                 </div>
@@ -46,7 +46,7 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-6 w-4/12">
+            <div className="flex flex-col gap-6 lg:w-4/12 mt-5 lg:mt-0">
               <div>
                 <MonthlyEarnings />
               </div>

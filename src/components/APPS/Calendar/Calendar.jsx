@@ -31,7 +31,7 @@ function Calendar() {
 
   return (
 
-    <div className="w-full xl:w-7/12 xl:mx-auto mt-32 mb-20">
+    <div className="w-full xl:w-7/12 xl:mx-auto mt-24 lg:mt-32 lg:mb-20">
     <div className="flex flex-col gap-10 ">
       <div className="px-5 bg-indigo-50 rounded-lg">
         <div className="flex justify-between items-center">
@@ -40,11 +40,11 @@ function Calendar() {
             <p className="text-sm text-gray-600">Best Employees</p>
           </div>
           <div>
-            <img src="/ChatBc.png" alt="calender-img" className="h-36" />
+            <img src="/ChatBc.png" alt="calender-img" className="h-24 lg:h-36" />
           </div>
         </div>
       </div>
-      <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 p-8">
+      <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 p-3 lg:p-8 h-screen">
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           initialView="dayGridMonth"
