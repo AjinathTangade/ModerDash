@@ -11,23 +11,28 @@ i {
   display: flex;
 }
 
-
-
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* *::-webkit-scrollbar-track {
-  background: orange;
-} */
-
 *::-webkit-scrollbar-thumb {
   background-color: #e0e7ff;
   border-radius: 20px;
   width: 3px;
 
   /* border: 3px solid rgb(124, 124, 124); */
+}
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  background: gray;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #e0e7ff;
+  border-radius: 10px;
 }
 
 .apexcharts-legend.apexcharts-align-center.apx-legend-position-right {

@@ -143,8 +143,8 @@ function Kanban() {
   const noteContentRefs = useRef([]);
 
   return (
-    <div className="w-full xl:w-7/12 xl:mx-auto mt-32 mb-20">
-      <div className="flex flex-col gap-10 ">
+    <div className="lg:w-full xl:w-7/12 xl:mx-auto mt-24 lg:mt-32 lg:mb-20">
+      <div className="flex flex-col gap-8 lg:gap-10 ">
         <div className="px-5 bg-indigo-50 rounded-lg">
           <div className="flex justify-between items-center">
             <div>
@@ -152,11 +152,12 @@ function Kanban() {
               <p className="text-sm text-gray-600">Best Employees</p>
             </div>
             <div>
-              <img src="/ChatBc.png" alt="calender-img" className="h-36" />
+              <img src="/ChatBc.png" alt="calender-img" className="h-24 lg:h-36" />
             </div>
           </div>
         </div>
-        <div className=" flex justify-end ">
+        <div className="flex justify-between items-center texa-md md:text-lg font-semibold">
+        <h2>Improving Work Processes</h2>
           <button
             onClick={handleAddNote}
             className="bg-blue-500 p-3 text-white rounded-lg text-sm font-medium"
@@ -175,7 +176,7 @@ function Kanban() {
               setNewNoteName={setNewNoteName}
             />
           )}
-          <div className="flex flex-wrap gap-5 justify-center h-screen">
+          <div className="flex overflow-x-auto  gap-5  h-screen z-30">
             {notes.map((note, index) => (
               <div
                 key={index}
