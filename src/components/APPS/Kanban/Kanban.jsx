@@ -7,15 +7,76 @@ function Kanban() {
   const [newNoteName, setNewNoteName] = useState("");
 
   useEffect(() => {
-    // Initialize with four default notes, each with the same content
+    // Initialize with four default notes, each with different tasks containing dates and images
     const defaultNoteContent = [
-      { content: "Todo", tasks: [], color: "#eaeff4" },
-      { content: "In Progress", tasks: [], color: "#ecf8ff" },
-      { content: "Pending", tasks: [], color: "#ebf3fe" },
-      { content: "Done", tasks: [], color: "#e6fffa" },
+      {
+        content: "Todo",
+        tasks: [
+          {
+            content: "Task 1",
+            date: "2024-02-06",
+            image: "/path/to/image1.jpg",
+          },
+          {
+            content: "Task 2",
+            date: "2024-02-07",
+            image: "/path/to/image2.jpg",
+          },
+        ],
+        color: "#eaeff4",
+      },
+      {
+        content: "In Progress",
+        tasks: [
+          {
+            content: "Task 3",
+            date: "2024-02-08",
+            image: "/path/to/image3.jpg",
+          },
+          {
+            content: "Task 4",
+            date: "2024-02-09",
+            image: "/path/to/image4.jpg",
+          },
+        ],
+        color: "#ecf8ff",
+      },
+      {
+        content: "Pending",
+        tasks: [
+          {
+            content: "Task 5",
+            date: "2024-02-10",
+            image: "/path/to/image5.jpg",
+          },
+          {
+            content: "Task 6",
+            date: "2024-02-11",
+            image: "/path/to/image6.jpg",
+          },
+        ],
+        color: "#ebf3fe",
+      },
+      {
+        content: "Done",
+        tasks: [
+          {
+            content: "Task 7",
+            date: "2024-02-12",
+            image: "/path/to/image7.jpg",
+          },
+          {
+            content: "Task 8",
+            date: "2024-02-13",
+            image: "/path/to/image8.jpg",
+          },
+        ],
+        color: "#e6fffa",
+      },
     ];
+
     setNotes(defaultNoteContent);
-  }, []);
+  }, []); // Empty dependency array ensures the effect runs only once
 
   const handleAddNote = () => {
     setShowPopup(true); // Show the popup for adding a new note
@@ -25,14 +86,14 @@ function Kanban() {
     // Generate a random color
     const colors = ["#eaeff4", "#ecf8ff", "#ebf3fe", "#e6fffa"]; // Define available colors
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  
+
     // Create a new note object with the provided note name and random color
     const newNote = {
       content: inputValue.trim() !== "" ? inputValue : "New Note",
       tasks: [],
       color: randomColor,
     };
-  
+
     if (editIndex !== null && editIndex !== undefined) {
       // If editing an existing note, replace the note at the specified index
       const updatedNotes = [...notes];
@@ -42,7 +103,7 @@ function Kanban() {
       // If adding a new note, append the new note to the existing notes
       setNotes([...notes, newNote]);
     }
-  
+
     setShowPopup(false); // Close the popup
   };
 
@@ -120,41 +181,68 @@ function Kanban() {
               setNewNoteName={setNewNoteName}
             />
           )}
-          <div className="flex flex-wrap gap-10 justify-center">
+          <div className="flex flex-wrap gap-10 justify-center h-52">
             {notes.map((note, index) => (
               <div
                 key={index}
-                className=""
-                style={{ height: calculateNoteHeight(index), backgroundColor: note.color}}
+                className="rounded-lg"
+                style={{
+                  height: calculateNoteHeight(index),
+                  backgroundColor: note.color,
+                }}
               >
-                 <div className="rounded-lg p-3 flex flex-col gap-3 w-60 " style={{ backgroundColor: note.color}}>
-                <div className="flex justify-between">
-                  <h3 className="text-md font-medium">{note.content}</h3>
-                  <div className="flex gap-4">
-                    <button className="font-medium text-sm text-blue-600 hover:text-blue-200" onClick={() => handleEdit(index)}><i className="fi fi-rr-edit"></i></button>
-                    <button className="font-medium text-md text-red-600 hover:text-red-200" onClick={() => handleDelete(index)}><i className="fi fi-rs-trash"></i></button>
+                <div
+                  className="rounded-lg p-3 flex flex-col gap-3 w-60 "
+                  style={{ backgroundColor: note.color }}
+                >
+                  <div className="flex justify-between">
+                    <h3 className="text-md font-medium">{note.content}</h3>
+                    <div className="flex gap-4">
+                      <button
+                        className="font-medium text-sm text-blue-600 hover:text-blue-200"
+                        onClick={() => handleEdit(index)}
+                      >
+                        <i className="fi fi-rr-edit"></i>
+                      </button>
+                      <button
+                        className="font-medium text-md text-red-600 hover:text-red-200"
+                        onClick={() => handleDelete(index)}
+                      >
+                        <i className="fi fi-rs-trash"></i>
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    className="w-full p-2 border border-indigo-300 rounded-md outline-none placeholder:text-sm"
-                    placeholder="Add Task"
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleAddTask(index, e.target.value);
-                        e.target.value = "";
-                      }
-                    }}
-                  />
-                </div>
-                <div>
-                  <ul ref={(ref) => noteContentRefs.current[index] = ref}>
-                    {note.tasks.map((task, taskIndex) => (
-                      <li key={taskIndex}>{task}</li>
+                  <div>
+                    <input
+                      type="text"
+                      className="w-full p-1 border border-indigo-300 rounded-md outline-none placeholder:text-sm placeholder:p-2"
+                      placeholder="Add Task"
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          handleAddTask(index, e.target.value);
+                          e.target.value = "";
+                        }
+                      }}
+                    />
+                  </div>
+                  <div>
+                    {notes.map((note, noteIndex) => (
+                      <div key={noteIndex}>
+                        <h2>{note.content}</h2>
+                        <ul>
+                          {note.tasks.map((task, taskIndex) => (
+                            <li key={taskIndex}>
+                              <div>
+                                <p>{task.content}</p>
+                                <p>{task.date}</p>
+                                <img src={task.image} alt={task.content} />
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
-                </div>
+                  </div>
                 </div>
               </div>
             ))}
