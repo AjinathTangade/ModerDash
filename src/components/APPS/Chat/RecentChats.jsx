@@ -10,43 +10,36 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export function DropdownMenuDemo() {
+export function RecentChats() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <i
+        {/* <i
           variant="outline"
           className="fi fi-br-menu-dots-vertical text-md text-gray-500 hover:text-indigo-400"
         >
-          {" "}
-        </i>
+        
+        </i> */}
+        <div className="flex gap-2 items-center">
+        <span className="text-sm font-semibold text-gray-500">Recent Chats </span>
+        <i className="fi fi-bs-angle-down text-gray-500 text-sm font-medium"></i>
+        </div>
+        
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <Settings className="mr-2 h-4 w-4" />
-            <span>Settings</span>
+            <span>Sort by time</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
-        <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <Users className="mr-2 h-4 w-4" />
-            <span>Team</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Plus className="mr-2 h-4 w-4" />
-            <span>New Team</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Keyboard className="mr-2 h-4 w-4" />
-            <span>Keyboard shortcuts</span>
+            <span>Sort by Unread</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <LogOut className="mr-2 h-4 w-4" />
-          <span>Log out</span>
+          <span>Hide favourites</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
