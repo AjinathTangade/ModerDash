@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import TopPerformers from "./components/TopPerformers/TopPerformers";
 import ContactTable from "./components/APPS/ContactTable/ContactTable";
 import Kanban from "./components/APPS/Kanban/Kanban";
+import Chat from "./components/APPS/Chat/Chat";
 function App() {
   return (
     <>
@@ -19,6 +20,8 @@ function App() {
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/contacttable" element={<ContactTable/>} />
           <Route path="/kanban" element={<Kanban/>} />
+          <Route path="/chat" element={<Chat/>} />
+          
         </Routes>
       </div>
     </>

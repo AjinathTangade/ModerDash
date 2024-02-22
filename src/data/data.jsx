@@ -13,7 +13,7 @@ const sideBarLinks = [
   },
   {
     label: "Chat",
-    href: "/calendar",
+    href: "/chat",
     icon: <i className="fi fi-rr-comment-alt"></i>,
   },
   {
@@ -68,7 +68,7 @@ const sideBarLinks = [
   },
   {
     label: "Chat",
-    href: "/calendar",
+    href: "/chat",
     icon: <i className="fi fi-rr-comment-alt"></i>,
   },
 ];
@@ -244,6 +244,57 @@ const userNotification = [
     desc: "Assign her new tasks",
   },
 ];
+const userChat = [
+  {
+    id: 1,
+    img: "/user-1.jpg",
+    title: "Mathew Anderson",
+    desc: "Marketing Director",
+    time: "15 mins"
+  },
+  {
+    id: 2,
+    img: "/user-2.jpg",
+    title: "Michell Flintoff",
+    desc: "You: Yesterdy was great...",
+    time: "30 mins"
+  },
+  {
+    id: 3,
+    img: "/user-3.jpg",
+    title: "Bianca Anderson",
+    desc: "Check your earnings",
+    time: "1 hours"
+  },
+  {
+    id: 4,
+    img: "/user-4.jpg",
+    title: "Andrew Johnson",
+    desc: "Assign her new tasks",
+    time: "4 hours"
+  },
+  {
+    id: 5,
+    img: "/user-5.jpg",
+    title: "Mark Strokes ",
+    desc: "John received payment",
+    time: "1 day"
+  },
+  {
+    id: 6,
+    img: "/user-5.jpg",
+    title: "Bianca Anderson",
+    desc: "Deducted from account",
+    time: "5 days"
+  },
+  {
+    id: 7,
+    img: "/user-4.jpg",
+    title: "Mark, Stoinus & Rishvi..",
+    desc: "Her is new",
+    time: "8 days"
+  },
+];
 const topPerformers = [
   {
     id: 1,
@@ -325,4 +376,5 @@ export {
   userProfile,
   userNotification,
   topPerformers,
+  userChat,
 };
