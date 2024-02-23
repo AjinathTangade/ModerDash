@@ -1,5 +1,4 @@
 import React from "react";
-
 const sideBarLinks = [
   {
     label: "Calendar",
@@ -434,7 +433,7 @@ const emailPeople = [
   {
     id: 2,
     name: "Smith James",
-    subSlug: "This latest updated kindly ",
+    subSlug: "This latest updated kindly exclamation",
     label: "Health",
     time: "02:00pm",
     icon: [
@@ -506,6 +505,23 @@ const emailPeople = [
     icon: [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+];
+
+const EmailMeassageBox =[{
+  
+    id: 8,
+    image:"/user-1.jpg",
+    email:"hello@loremipsum.com",
+    name: "Smith James",
+    subSlug: "This latest updated kindly check ",
+    label: "Social",
+    time: "12:00pm",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+      <i class="fi fi-rr-trash"></i>,
     ],
   },
 ];

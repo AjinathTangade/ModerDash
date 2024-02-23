@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import EmailMenu from "./EmailMenu";
-import { emailPeople } from "@/data/data";
 import { Link } from "react-router-dom";
 function EmailPerson({ emailPeople }) {
   const [searchQuery, setSearchQuery] = useState("");

@@ -1,8 +1,8 @@
 import React from "react";
 import EmailMenu from "./EmailMenu";
 import { emailPeople } from "@/data/data";
-
 import EmailPerson from "./EmailPerson";
+import EmailMeassageBox from "./EmailMeassageBox";
 function Email() {
   return (
     <div className="w-full xl:w-7/12 xl:mx-auto mt-32 mb-20 ">
@@ -22,14 +22,16 @@ function Email() {
             </div>
           </div>
         </div>
-        <div className="border rounded-md flex h-[800px]">
-          <div className="flex-initial w-56">
+        <div className="border rounded-md flex h-[800px] w-full">
+          <div className="w-3/12">
             <EmailMenu />
           </div>
-          <div className="flex-initial w-80 border border-y-0 h-full">
+          <div className=" w-5/12 border border-y-0 h-full">
             <EmailPerson emailPeople={emailPeople}/>
           </div>
-          <div className="grow p-5">1</div>
+          <div className="w-7/12">
+            <EmailMeassageBox />
+          </div>
         </div>
       </div>
     </div>
