@@ -150,8 +150,6 @@ function Chat() {
                     placeholder="Type a Message"
                     className="w-full border-none outline-none focus:ring-0 placeholder:text-sm font-sm"
                   />
-
-
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="h-12 w-12 hover:bg-indigo-50 rounded-full hover:text-indigo-400 flex items-center justify-center">
