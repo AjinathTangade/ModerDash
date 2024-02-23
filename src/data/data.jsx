@@ -18,7 +18,7 @@ const sideBarLinks = [
   },
   {
     label: "Email",
-    href: "/calendar",
+    href: "/email",
     icon: <i className="fi fi-rr-envelope"></i>,
   },
   {
@@ -63,7 +63,7 @@ const sideBarLinks = [
   },
   {
     label: "Email",
-    href: "/calendar",
+    href: "/email",
     icon: <i className="fi fi-rr-envelope"></i>,
   },
   {
@@ -367,6 +367,60 @@ const topPerformers = [
     project:"Flexy Admin",
   },
 ];
+const emailLinks = [
+  {
+    label: "Inbox",
+    href: "/inbox",
+    icon: <i className="fi fi-rr-envelope-plus"></i>,
+  },
+  {
+    label: "Sent",
+    href: "/sent",
+    icon: <i className="fi fi-rs-paper-plane"></i>,
+  },
+  {
+    label: "Draft",
+    href: "/draft",
+    icon: <i className="fi fi-rr-memo-pad"></i>,
+  },
+  {
+    label: "Span",
+    href: "/span",
+    icon: <i className="fi fi-rr-trash"></i>,
+  },
+  {
+    label: "Trash",
+    href: "/trash",
+    icon: <i className="fi fi-rr-memo"></i>,
+  },
+  {
+    label: "Important",
+    href: "/important",
+    icon: <i className="fi fi-rr-settings"></i>,
+  },
+  {
+    label: "Starred",
+    href: "/starred",
+    icon: <i className="fi fi-rr-star"></i>,
+  },
+  {
+    label: "Promotional",
+    href: "/promotional",
+    icon: <i className="fi fi-rr-bookmark text-indigo-400"></i>,
+  },
+  {
+    label: "Social",
+    href: "/social",
+    icon: <i className="fi fi-rr-share text-rose-500"></i>,
+  },
+  {
+    label: "Health",
+    href: "/health",
+    icon: <i className="fi fi-rr-doctor text-teal-400"></i>,
+  },
+  
+ 
+];
 export {
   sideBarLinks,
   sideBarLinksHome,
@@ -377,4 +431,5 @@ export {
   userNotification,
   topPerformers,
   userChat,
+  emailLinks,
 };
