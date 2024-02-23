@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { emailLinks } from "@/data/data";
-import YourComponent from "./YourComponent";
 
 function EmailMenu() {
   return (
     <div className="">
-      <div className="px-5 pt-5">
+      <div className="px-5 pt-5 mb-5">
         <div className="flex justify-center">
           <Link
             to=""
@@ -19,7 +18,7 @@ function EmailMenu() {
 
       <div className="overflow-y-auto h-screen">
         <div className="px-5 pb-3 border-b">
-          <div className="mt-4 flex flex-col">
+          <div className="flex flex-col">
             {emailLinks.slice(0, 4).map((link, index) => (
               <div className="" key={index}>
                 <Link
