@@ -22,7 +22,7 @@ const sideBarLinks = [
   },
   {
     label: "Notes",
-    href: "/calendar",
+    href: "/notes",
     icon: <i className="fi fi-rr-memo"></i>,
   },
   {
@@ -509,19 +509,101 @@ const emailPeople = [
   },
 ];
 
-const EmailMeassageBox =[{
-  
-    id: 8,
-    image:"/user-1.jpg",
-    email:"hello@loremipsum.com",
-    name: "Smith James",
-    subSlug: "This latest updated kindly check ",
-    label: "Social",
-    time: "12:00pm",
+const notes = [
+  {
+    id: 1,
+    name: "Give review for foods",
+    subSlug:
+      "Blandit tempus porttitor aasfs. Integer posuere erat a ante venenatis.",
+    category: "Business",
+    date: "25 March 2024",
     icon: [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
-      <i class="fi fi-rr-trash"></i>,
+    ],
+  },
+  {
+    id: 2,
+    name: "Change a Design",
+    subSlug:
+      "Blandit tempus porttitor aasfs. Integer posuere erat a ante venenatis.",
+    category: "Social",
+    date: "06 March 2024",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 3,
+    name: "Launch new template",
+    subSlug:
+      "Blandit tempus porttitor aasfs. Integer posuere erat a ante venenatis.",
+    category: "Business",
+    date: "11 March 2024",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 4,
+    name: "Nightout with friends",
+    subSlug:
+      "Blandit tempus porttitor aasfs. Integer posuere erat a ante venenatis.",
+    category: "Important",
+    date: "07 March 2024",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 5,
+    name: "Give Review for design",
+    subSlug:
+      "Blandit tempus porttitor aasfs. Integer posuere erat a ante venenatis.",
+    category: "Business",
+    date: "14 March 2024",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 6,
+    name: "Meeting with Mr.Jojo",
+    subSlug:
+      "Blandit tempus porttitor aasfs. Integer posuere erat a ante venenatis.",
+    category: "Social",
+    date: "21 March 2024",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 7,
+    name: "Go for lunch",
+    subSlug:
+      "Blandit tempus porttitor aasfs. Integer posuere erat a ante venenatis.",
+    category: "Important",
+    date: "11 March 2024",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 8,
+    name: "Book a Ticket for Movie",
+    subSlug:
+      "Blandit tempus porttitor aasfs. Integer posuere erat a ante venenatis.",
+    category: "Social",
+    date: "03 March 2024",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
     ],
   },
 ];
@@ -537,4 +619,5 @@ export {
   userChat,
   emailLinks,
   emailPeople,
+  notes,
 };
