@@ -32,7 +32,7 @@ const sideBarLinks = [
   },
   {
     label: "Contact List",
-    href: "/ContactTable",
+    href: "/contactlist",
     icon: <i className="fi fi-rr-list-timeline"></i>,
   },
   {
@@ -57,7 +57,7 @@ const sideBarLinks = [
   },
   {
     label: "Contact List",
-    href: "/calendar",
+    href: "/contactlist",
     icon: <i className="fi fi-rr-list-timeline"></i>,
   },
   {
@@ -369,52 +369,52 @@ const topPerformers = [
 const emailLinks = [
   {
     label: "Inbox",
-    href: "/inbox",
+    href: "",
     icon: <i className="fi fi-rr-envelope-plus"></i>,
   },
   {
     label: "Sent",
-    href: "/sent",
+    href: "",
     icon: <i className="fi fi-rs-paper-plane"></i>,
   },
   {
     label: "Draft",
-    href: "/draft",
+    href: "",
     icon: <i className="fi fi-rr-memo-pad"></i>,
   },
   {
     label: "Span",
-    href: "/span",
+    href: "",
     icon: <i className="fi fi-rr-trash"></i>,
   },
   {
     label: "Trash",
-    href: "/trash",
+    href: "",
     icon: <i className="fi fi-rr-memo"></i>,
   },
   {
     label: "Important",
-    href: "/important",
+    href: "",
     icon: <i className="fi fi-rr-settings"></i>,
   },
   {
     label: "Starred",
-    href: "/starred",
+    href: "",
     icon: <i className="fi fi-rr-star"></i>,
   },
   {
     label: "Promotional",
-    href: "/promotional",
+    href: "",
     icon: <i className="fi fi-rr-bookmark text-indigo-400"></i>,
   },
   {
     label: "Social",
-    href: "/social",
+    href: "",
     icon: <i className="fi fi-rr-share text-rose-500"></i>,
   },
   {
     label: "Health",
-    href: "/health",
+    href: "",
     icon: <i className="fi fi-rr-doctor text-teal-400"></i>,
   },
 ];
@@ -508,7 +508,96 @@ const emailPeople = [
     ],
   },
 ];
-
+const contactPeople = [
+  {
+    id: 1,
+    name: "James Smith",
+    subSlug: "Kindly check updated star",
+    label: "Promotional",
+    time: "04:00pm",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rs-circle-cross"></i>,
+    ],
+  },
+  {
+    id: 2,
+    name: "Smith James",
+    subSlug: "This latest updated kindly exclamation",
+    label: "Health",
+    time: "02:00pm",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 3,
+    name: "Katherine Flintoff",
+    subSlug: "Updated kindly check this latest ",
+    label: "Social",
+    time: "02:00pm",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 4,
+    name: "Bianca Macdowells",
+    subSlug: "Updated kindly check this latest ",
+    label: "Health",
+    time: "05:00pm",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 5,
+    name: "Michael Knight",
+    subSlug: "Updated kindly check this latest ",
+    label: "Social",
+    time: "11:20pm",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 6,
+    name: "Mike Torello",
+    subSlug: "Latest updated kindly check this ",
+    label: "Health",
+    time: "09:00pm",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 7,
+    name: "Torello Mike",
+    subSlug: "Latest updated kindly check this ",
+    label: "Promotional",
+    time: "07:00pm",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+  {
+    id: 8,
+    name: "Smith James",
+    subSlug: "This latest updated kindly check ",
+    label: "Social",
+    time: "12:00pm",
+    icon: [
+      <i className="fi fi-rr-star"></i>,
+      <i class="fi fi-rr-exclamation"></i>,
+    ],
+  },
+];
 const notes = [
   {
     id: 1,
@@ -607,6 +696,58 @@ const notes = [
     ],
   },
 ];
+const contactLinks = [
+  {
+    label: "All Contacts ",
+    href: "",
+    icon: <i className="fi fi-rr-envelope-plus"></i>,
+  },
+  {
+    label: "Starred",
+    href: "",
+    icon: <i class="fi fi-rr-star"></i>,
+  },
+  {
+    label: "Pending ",
+    href: "",
+    icon: <i class="fi fi-rr-note-medical"></i>,
+  },
+  {
+    label: "Blocked ",
+    href: "",
+    icon: <i class="fi fi-rr-exclamation"></i>,
+  },
+  {
+    label: "Engineers",
+    href: "",
+    icon: <i className="fi fi-rr-memo"></i>,
+  },
+  {
+    label: "Support Staff ",
+    href: " ",
+    icon: <i className="fi fi-rr-settings"></i>,
+  },
+  {
+    label: "Engineers ",
+    href: "",
+    icon: <i className="fi fi-rr-star"></i>,
+  },
+  {
+    label: "Promotional",
+    href: "",
+    icon: <i className="fi fi-rr-bookmark text-indigo-400"></i>,
+  },
+  {
+    label: "Social",
+    href: "",
+    icon: <i className="fi fi-rr-share text-rose-500"></i>,
+  },
+  {
+    label: "Health",
+    href: "",
+    icon: <i className="fi fi-rr-doctor text-teal-400"></i>,
+  },
+];
 export {
   sideBarLinks,
   sideBarLinksHome,
@@ -620,4 +761,6 @@ export {
   emailLinks,
   emailPeople,
   notes,
+  contactPeople,
+  contactLinks,
 };

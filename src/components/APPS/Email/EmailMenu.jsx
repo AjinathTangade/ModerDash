@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { emailLinks } from "@/data/data";
+import { emailLinks} from "@/data/data";
+function EmailMenu({emailLinks}) {
+  // Corrected useState usage
 
-function EmailMenu() {
+  if(!emailLinks){
+    return null;
+  }
+  // const [emailLinkss, setEmailLinkss] = useState(emailLinks);
+  // console.log(emailLinkss);
   return (
     <div className="">
       <div className="px-5 pt-5 mb-5">
@@ -21,8 +27,9 @@ function EmailMenu() {
           <div className="flex flex-col">
             {emailLinks.slice(0, 4).map((link, index) => (
               <div className="" key={index}>
+                {/* Corrected to={link.href} */}
                 <Link
-                  to={link.herf}
+                  to={link.href}
                   className="flex items-center gap-4 px-4 h-11 text-gray-600 hover:bg-indigo-50 rounded-lg"
                 >
                   <span>{link.icon}</span>
@@ -39,8 +46,9 @@ function EmailMenu() {
           <div className="mt-3">
             {emailLinks.slice(5, 7).map((link, index) => (
               <div className="" key={index}>
+                {/* Corrected to={link.href} */}
                 <Link
-                  to={link.herf}
+                  to={link.href}
                   className="flex items-center gap-4 px-4 h-11 text-gray-600 hover:bg-indigo-50 rounded-lg"
                 >
                   <span>{link.icon}</span>
@@ -57,8 +65,9 @@ function EmailMenu() {
           <div className="mt-3">
             {emailLinks.slice(7, 11).map((link, index) => (
               <div className="" key={index}>
+                {/* Corrected to={link.href} */}
                 <Link
-                  to={link.herf}
+                  to={link.href}
                   className="flex items-center gap-4 px-4 h-11 text-gray-600 hover:bg-indigo-50 rounded-lg"
                 >
                   <span>{link.icon}</span>

@@ -9,6 +9,7 @@ import Kanban from "./components/APPS/Kanban/Kanban";
 import Chat from "./components/APPS/Chat/Chat";
 import Email from "./components/APPS/Email/Email";
 import Notes from "./components/APPS/Notes/Notes";
+import ContactList from "./components/APPS/ContactList/ContactList";
 function App() {
   return (
     <>
@@ -24,6 +25,8 @@ function App() {
           <Route path="/chat" element={<Chat/>} />
           <Route path="/email" element={<Email />} />
           <Route path="/notes" element={<Notes />} />
+          <Route path="/contactlist" element={<ContactList />} />
+          
          
         </Routes>
       </div>

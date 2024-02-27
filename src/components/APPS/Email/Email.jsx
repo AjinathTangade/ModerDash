@@ -1,6 +1,7 @@
 import React from "react";
 import EmailMenu from "./EmailMenu";
-import { emailPeople } from "@/data/data";
+import {emailPeople} from "@/data/data";
+import {emailLinks} from "@/data/data";
 import EmailPerson from "./EmailPerson";
 import EmailMeassageBox from "./EmailMeassageBox";
 function Email() {
@@ -22,9 +23,10 @@ function Email() {
             </div>
           </div>
         </div>
+
         <div className="border rounded-md flex h-[800px] w-full">
           <div className="w-3/12">
-            <EmailMenu />
+            <EmailMenu emailLinks={emailLinks}/>
           </div>
           <div className=" w-5/12 border border-y-0 h-full">
             <EmailPerson emailPeople={emailPeople}/>
