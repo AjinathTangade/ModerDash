@@ -5,7 +5,7 @@ function Notes() {
   const [selectCategory, setselectCategory] = useState(null);
   const [filterNotes, setfilterNotes] = useState([]);
   const [activeButton, setActiveButton] = useState(1);
-
+  const [showAddNoteForm, setShowAddNoteForm] = useState(false);
   useEffect(() => {
     handleAllCategoriesClick();
   }, []);
@@ -25,6 +25,10 @@ function Notes() {
   const deleteNote = (id) => {
     const deleteNotes = filterNotes.filter((note) => note.id != id);
     setfilterNotes(deleteNotes);
+  };
+
+  const toggleAddNoteForm = () => {
+    setShowAddNoteForm(!showAddNoteForm);
   };
 
   return (
@@ -48,8 +52,8 @@ function Notes() {
           </div>
         </div>
         <div>
-          <div className="flex gap-5 justify-between p-3 border rounded-lg shadow-[5px] shadow-red">
-            <div className="flex gap-8">
+          <div className="flex gap-5 justify-between p-3 flex-wrap border rounded-lg shadow-[5px] shadow-red relative">
+            <div className="flex gap-8 flex-wrap">
               <button
                 className={`flex items-center gap-3 ${
                   activeButton === 1
@@ -103,13 +107,64 @@ function Notes() {
                 Important
               </button>
             </div>
-            <div>
-              <button className="flex gap-2 items-center bg-blue-500 p-3 text-white rounded-lg text-sm font-medium">
+            <div className="relative">
+              <button
+                className="flex gap-2 items-center bg-blue-500 p-3 text-white rounded-lg text-sm font-medium"
+                onClick={toggleAddNoteForm}
+              >
                 <span>
                   <i className="fi fi-rr-note-sticky "></i>
                 </span>
                 Add Notes
               </button>
+              {showAddNoteForm && (
+                <div className="absolute md:right-32 border w-80 h-80 lg:w-96 rounded-lg bg-white z-10">
+                  <div>
+                    <div className="bg-blue-500 h-12 flex items-center px-5 rounded-t-lg">
+                      <h3 className="text-white">Add Notes</h3>
+                    </div>
+                    <div className="px-3 pt-5 flex flex-col gap-4">
+                      <div className="flex flex-col gap-2">
+                        <label
+                          htmlFor="Note Title"
+                          className="font-semibold text-sm"
+                        >
+                          Note Title
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Title"
+                          className="border p-2 rounded-md placeholder:text-sm placeholder:text-gray-500"
+                        />
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <label
+                          htmlFor="Note Title"
+                          className="font-semibold text-sm"
+                        >
+                          Note Description
+                        </label>
+
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows="2"
+                          className="border border-gray-200 p-2 rounded-md placeholder:text-sm placeholder:text-gray-500 "
+                          placeholder="Description"
+                        ></textarea>
+                      </div>
+                      <div className="flex justify-end gap-4 ">
+                        <button className="p-2 rounded-md font-semibold text-sm text-red-400 bg-red-50 w-20 hover:bg-red-400 hover:text-white">
+                          Discord
+                        </button>
+                        <button className="p-2 rounded-md font-semibold text-sm text-white bg-blue-300 w-16 hover:bg-blue-500 ">
+                          Add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
