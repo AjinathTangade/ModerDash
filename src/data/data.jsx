@@ -429,17 +429,19 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    
   },
   {
     id: 2,
     name: "Smith James",
-    subSlug: "This latest updated kindly exclamation",
+    subSlug: "This latest updated kindly exclam",
     label: "Health",
     time: "02:00pm",
     icon: [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    
   },
   {
     id: 3,
@@ -451,6 +453,7 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    
   },
   {
     id: 4,
@@ -462,6 +465,7 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    
   },
   {
     id: 5,
@@ -473,6 +477,7 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    
   },
   {
     id: 6,
@@ -484,6 +489,7 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    
   },
   {
     id: 7,
@@ -495,6 +501,7 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    
   },
   {
     id: 8,
@@ -506,6 +513,7 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    
   },
 ];
 const contactPeople = [
@@ -519,6 +527,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rs-circle-cross"></i>,
     ],
+    img:"/user-1.jpg"
   },
   {
     id: 2,
@@ -530,6 +539,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    img:"/user-2.jpg"
   },
   {
     id: 3,
@@ -541,6 +551,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    img:"/user-3.jpg"
   },
   {
     id: 4,
@@ -552,6 +563,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    img:"/user-4.jpg"
   },
   {
     id: 5,
@@ -563,6 +575,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    img:"/user-5.jpg"
   },
   {
     id: 6,
@@ -574,6 +587,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    img:"/user-2.jpg"
   },
   {
     id: 7,
@@ -585,6 +599,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    img:"/user-4.jpg"
   },
   {
     id: 8,
@@ -596,6 +611,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
+    img:"/user-5.jpg"
   },
 ];
 const notes = [
@@ -698,7 +714,7 @@ const notes = [
 ];
 const contactLinks = [
   {
-    label: "All Contacts ",
+    label: "All Contacts",
     href: "",
     icon: <i className="fi fi-rr-envelope-plus"></i>,
   },

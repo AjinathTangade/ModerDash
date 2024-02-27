@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { emailLinks} from "@/data/data";
-function EmailMenu({emailLinks}) {
-  // Corrected useState usage
-
-  if(!emailLinks){
+import { emailLinks } from "@/data/data";
+function EmailMenu({ emailLinks }) {
+  if (!emailLinks) {
     return null;
   }
-  // const [emailLinkss, setEmailLinkss] = useState(emailLinks);
-  // console.log(emailLinkss);
+
   return (
     <div className="">
       <div className="px-5 pt-5 mb-5">
@@ -27,7 +24,6 @@ function EmailMenu({emailLinks}) {
           <div className="flex flex-col">
             {emailLinks.slice(0, 4).map((link, index) => (
               <div className="" key={index}>
-                {/* Corrected to={link.href} */}
                 <Link
                   to={link.href}
                   className="flex items-center gap-4 px-4 h-11 text-gray-600 hover:bg-indigo-50 rounded-lg"
