@@ -519,7 +519,7 @@ const notes = [
     date: "25 March 2024",
     icon: [
       <i className="fi fi-rr-star"></i>,
-      <i class="fi fi-rr-exclamation"></i>,
+      <i className="fi fi-rr-trash"></i>,
     ],
   },
   {
@@ -531,7 +531,7 @@ const notes = [
     date: "06 March 2024",
     icon: [
       <i className="fi fi-rr-star"></i>,
-      <i class="fi fi-rr-exclamation"></i>,
+      <i className="fi fi-rr-trash"></i>,
     ],
   },
   {
@@ -543,7 +543,7 @@ const notes = [
     date: "11 March 2024",
     icon: [
       <i className="fi fi-rr-star"></i>,
-      <i class="fi fi-rr-exclamation"></i>,
+      <i className="fi fi-rr-trash"></i>,
     ],
   },
   {
@@ -555,7 +555,7 @@ const notes = [
     date: "07 March 2024",
     icon: [
       <i className="fi fi-rr-star"></i>,
-      <i class="fi fi-rr-exclamation"></i>,
+      <i className="fi fi-rr-trash"></i>,
     ],
   },
   {
@@ -567,7 +567,7 @@ const notes = [
     date: "14 March 2024",
     icon: [
       <i className="fi fi-rr-star"></i>,
-      <i class="fi fi-rr-exclamation"></i>,
+      <i className="fi fi-rr-trash"></i>,
     ],
   },
   {
@@ -579,7 +579,7 @@ const notes = [
     date: "21 March 2024",
     icon: [
       <i className="fi fi-rr-star"></i>,
-      <i class="fi fi-rr-exclamation"></i>,
+      <i className="fi fi-rr-trash"></i>,
     ],
   },
   {
@@ -591,7 +591,7 @@ const notes = [
     date: "11 March 2024",
     icon: [
       <i className="fi fi-rr-star"></i>,
-      <i class="fi fi-rr-exclamation"></i>,
+      <i className="fi fi-rr-trash"></i>,
     ],
   },
   {
@@ -603,7 +603,7 @@ const notes = [
     date: "03 March 2024",
     icon: [
       <i className="fi fi-rr-star"></i>,
-      <i class="fi fi-rr-exclamation"></i>,
+      <i className="fi fi-rr-trash"></i>,
     ],
   },
 ];

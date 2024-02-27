@@ -22,6 +22,11 @@ function Notes() {
     setfilterNotes(notes);
     setActiveButton(1);
   };
+  const deleteNote = (id) => {
+    const deleteNotes = filterNotes.filter((note) => note.id != id);
+    setfilterNotes(deleteNotes);
+  };
+
   return (
     <div className="w-full xl:w-7/12 xl:mx-auto mt-32 mb-20 ">
       <div className="flex flex-col gap-10">
@@ -129,13 +134,16 @@ function Notes() {
                     </p>
                   </div>
                   <div className="flex justify-between">
-                    <div className="flex gap-2">
+                    <div className="flex gap-3">
                       <span className="text-gray-500 text-sm">
                         {note.icon[0]}
                       </span>
-                      <span className="text-gray-500 text-sm">
+                      <button
+                        className="text-red-500 text-sm"
+                        onClick={() => deleteNote(note.id)}
+                      >
                         {note.icon[1]}
-                      </span>
+                      </button>
                     </div>
                   </div>
                 </div>
