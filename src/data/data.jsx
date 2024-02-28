@@ -40,8 +40,6 @@ const sideBarLinks = [
     href: "/invoice",
     icon: <i className="fi fi-rr-file-invoice"></i>,
   },
- 
-  
 ];
 const sideBarLinksHome = [
   {
@@ -401,7 +399,6 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    
   },
   {
     id: 2,
@@ -413,7 +410,6 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    
   },
   {
     id: 3,
@@ -425,7 +421,6 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    
   },
   {
     id: 4,
@@ -437,7 +432,6 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    
   },
   {
     id: 5,
@@ -449,7 +443,6 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    
   },
   {
     id: 6,
@@ -461,7 +454,6 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    
   },
   {
     id: 7,
@@ -473,7 +465,6 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    
   },
   {
     id: 8,
@@ -485,7 +476,6 @@ const emailPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    
   },
 ];
 const contactPeople = [
@@ -499,7 +489,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rs-circle-cross"></i>,
     ],
-    img:"/user-1.jpg"
+    img: "/user-1.jpg",
   },
   {
     id: 2,
@@ -511,7 +501,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    img:"/user-2.jpg"
+    img: "/user-2.jpg",
   },
   {
     id: 3,
@@ -523,7 +513,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    img:"/user-3.jpg"
+    img: "/user-3.jpg",
   },
   {
     id: 4,
@@ -535,7 +525,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    img:"/user-4.jpg"
+    img: "/user-4.jpg",
   },
   {
     id: 5,
@@ -547,7 +537,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    img:"/user-5.jpg"
+    img: "/user-5.jpg",
   },
   {
     id: 6,
@@ -559,7 +549,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    img:"/user-2.jpg"
+    img: "/user-2.jpg",
   },
   {
     id: 7,
@@ -571,7 +561,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    img:"/user-4.jpg"
+    img: "/user-4.jpg",
   },
   {
     id: 8,
@@ -583,7 +573,7 @@ const contactPeople = [
       <i className="fi fi-rr-star"></i>,
       <i class="fi fi-rr-exclamation"></i>,
     ],
-    img:"/user-5.jpg"
+    img: "/user-5.jpg",
   },
 ];
 const notes = [
@@ -736,6 +726,69 @@ const contactLinks = [
     icon: <i className="fi fi-rr-doctor text-teal-400"></i>,
   },
 ];
+const invoice = [
+  {
+    name: "All Contacts",
+    href: "",
+    icon: <i class="fi fi-brands-facebook"></i>,
+    label: "test",
+  },
+  {
+    name: "Starred",
+    href: "",
+    icon: <i class="fi fi-brands-facebook"></i>,
+    label: "test",
+  },
+  {
+    name: "Pending ",
+    href: "",
+    icon: <i class="fi fi-brands-facebook"></i>,
+    label: "test",
+  },
+  {
+    name: "Blocked ",
+    href: "",
+    icon: <i class="fi fi-brands-facebook"></i>,
+    label: "test",
+  },
+  {
+    name: "Engineers",
+    href: "",
+    icon: <i class="fi fi-rr-user"></i>,
+    label: "test",
+  },
+];
+const invoiceTable = [
+  {
+    id: 1,
+    name: "Milk Powder",
+    quantity: 5,
+    unit: "$5",
+    total: "$23",
+  },
+  {
+    id: 2,
+    name: "Air Conditioner",
+    quantity: 20,
+    unit: "$51",
+    total: "$80",
+  },
+  {
+    id: 3,
+    name: "RC Cars",
+    quantity: 10,
+    unit: "$23",
+    total: "$523",
+  },
+  {
+    id: 4,
+    name: "Down Coat",
+    quantity: 16,
+    unit: "$34",
+    total: "$6523",
+  },
+
+];
 export {
   sideBarLinks,
   sideBarLinksHome,
@@ -751,4 +804,6 @@ export {
   notes,
   contactPeople,
   contactLinks,
+  invoice,
+  invoiceTable,
 };

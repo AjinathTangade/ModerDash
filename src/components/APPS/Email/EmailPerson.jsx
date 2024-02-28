@@ -35,14 +35,7 @@ function EmailPerson({ emailPeople }) {
                     : "bg-white-500 hover:bg-indigo-50"
                 }`}
               >
-                <div class="flex items-start relative top-1.5">
-                  <input
-                    id="laravel-checkbox-list"
-                    type="checkbox"
-                    value=""
-                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded "
-                  />
-                </div>
+                
                 <div className="flex flex-col gap-2">
                   <div className="flex">
                     <div className="flex flex-col">
@@ -117,6 +110,32 @@ function EmailPerson({ emailPeople }) {
                     </h3>
                     <p className="text-sm text-gray-500 group-hover:text-indigo-400">
                       {profile.subSlug}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            )}
+            {!profile.label && (
+              <Link
+                key={index}
+                to=""
+                onClick={() => handleLinkClick(index)}
+                className={`block px-5 py-4 flex gap-3 px-5 py-4 group ${
+                  activeLink === index
+                    ? "bg-gray-100"
+                    : "bg-white-500 hover:bg-indigo-50"
+                }`}
+              >
+                <div className="flex gap-4 items-center">
+                  <div className="flex items-start h-14 w-14 ">
+                    <span className="text-white"> {profile.icon[0]}</span>
+                  </div>
+                  <div className="flex flex-col justify-center h-12">
+                    <h3 className="font-semibold text-sm group-hover:text-indigo-500">
+                      {profile.label}
+                    </h3>
+                    <p className="text-sm text-gray-500 group-hover:text-indigo-400">
+                      {/* {profile.subSlug} */}
                     </p>
                   </div>
                 </div>
