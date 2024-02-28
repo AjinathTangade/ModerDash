@@ -10,6 +10,7 @@ import Chat from "./components/APPS/Chat/Chat";
 import Email from "./components/APPS/Email/Email";
 import Notes from "./components/APPS/Notes/Notes";
 import ContactList from "./components/APPS/ContactList/ContactList";
+import Invoice from "./components/APPS/Invoice/Invoice";
 function App() {
   return (
     <>
@@ -26,8 +27,7 @@ function App() {
           <Route path="/email" element={<Email />} />
           <Route path="/notes" element={<Notes />} />
           <Route path="/contactlist" element={<ContactList />} />
-          
-         
+          <Route path="/invoice" element={<Invoice />} />
         </Routes>
       </div>
     </>

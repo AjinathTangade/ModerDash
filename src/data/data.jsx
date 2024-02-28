@@ -37,39 +37,11 @@ const sideBarLinks = [
   },
   {
     label: "Invoice",
-    href: "/calendar",
+    href: "/invoice",
     icon: <i className="fi fi-rr-file-invoice"></i>,
   },
-  {
-    label: "User Profile",
-    href: "/calendar",
-    icon: <i className="fi fi-rr-circle-user"></i>,
-  },
-  {
-    label: "Blog",
-    href: "/calendar",
-    icon: <i className="fi fi-rr-blog-pencil"></i>,
-  },
-  {
-    label: "Ecommerce",
-    href: "/calendar",
-    icon: <i className="fi fi-rs-basket-shopping-simple"></i>,
-  },
-  {
-    label: "Contact List",
-    href: "/contactlist",
-    icon: <i className="fi fi-rr-list-timeline"></i>,
-  },
-  {
-    label: "Email",
-    href: "/email",
-    icon: <i className="fi fi-rr-envelope"></i>,
-  },
-  {
-    label: "Chat",
-    href: "/chat",
-    icon: <i className="fi fi-rr-comment-alt"></i>,
-  },
+ 
+  
 ];
 const sideBarLinksHome = [
   {

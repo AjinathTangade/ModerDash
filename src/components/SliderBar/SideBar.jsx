@@ -59,9 +59,9 @@ function SideBar() {
           </nav>
         </div>
       </div>
-      <div className="fixed h-24 bottom-0 z-20 bg-white w-80 flex justify-center items-center ">
-        <div className="w-52 h-16 bg-indigo-50 flex justify-center items-center rounded-lg">
-          <div className="flex gap-4 items-center justify-center">
+      <div className="fixed h-24 bottom-0 z-20 bg-white w-full max-w-80 flex justify-center items-center ">
+        <div className="w-full max-w-64 h-16 bg-indigo-50 flex justify-center items-center rounded-lg">
+          <div className="flex gap-8 items-center justify-between">
             <div className="">
               <img
                 src="/user-1.jpg"
