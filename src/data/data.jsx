@@ -728,34 +728,39 @@ const contactLinks = [
 ];
 const invoice = [
   {
-    name: "All Contacts",
+    name: "test",
     href: "",
     icon: <i class="fi fi-brands-facebook"></i>,
     label: "test",
+    date:"10-02-2024",
   },
   {
-    name: "Starred",
+    name: "test",
     href: "",
     icon: <i class="fi fi-brands-facebook"></i>,
     label: "test",
+    date:"10-02-2024",
   },
   {
-    name: "Pending ",
+    name: "test ",
     href: "",
     icon: <i class="fi fi-brands-facebook"></i>,
     label: "test",
+    date:"10-02-2024",
   },
   {
-    name: "Blocked ",
+    name: "test ",
     href: "",
     icon: <i class="fi fi-brands-facebook"></i>,
     label: "test",
+    date:"10-02-2024",
   },
   {
-    name: "Engineers",
+    name: "test",
     href: "",
     icon: <i class="fi fi-rr-user"></i>,
     label: "test",
+    date:"10-02-2024",
   },
 ];
 const invoiceTable = [
