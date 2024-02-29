@@ -11,19 +11,24 @@ import Email from "./components/APPS/Email/Email";
 import Notes from "./components/APPS/Notes/Notes";
 import ContactList from "./components/APPS/ContactList/ContactList";
 import Invoice from "./components/APPS/Invoice/Invoice";
+import SonnerAlr from "./components/SonnerAlr/SonnerAlr";
 function App() {
   return (
     <>
       <div className="xl:flex overflow-hidden px-5 xl:justify-between">
         <SideBar />
+        <div className="z-40">
+          <SonnerAlr />
+        </div>
         <NavBar />
+
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/calendar" element={<Calendar />} />
-          <Route path="/contacttable" element={<ContactTable/>} />
-          <Route path="/kanban" element={<Kanban/>} />
-          <Route path="/chat" element={<Chat/>} />
+          <Route path="/contacttable" element={<ContactTable />} />
+          <Route path="/kanban" element={<Kanban />} />
+          <Route path="/chat" element={<Chat />} />
           <Route path="/email" element={<Email />} />
           <Route path="/notes" element={<Notes />} />
           <Route path="/contactlist" element={<ContactList />} />

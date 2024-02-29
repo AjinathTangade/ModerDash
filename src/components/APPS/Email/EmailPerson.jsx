@@ -47,6 +47,7 @@ function EmailPerson({ emailPeople }) {
                       </p>
                     </div>
                   </div>
+                  
                   <div className="flex justify-between">
                     <div className="flex gap-2">
                       <span className="text-gray-500 text-sm">
@@ -57,6 +58,7 @@ function EmailPerson({ emailPeople }) {
                       </span>
                     </div>
                   </div>
+                  
                 </div>
                 <div className="flex flex-col justify-between items-end">
                   <div>
@@ -104,20 +106,19 @@ function EmailPerson({ emailPeople }) {
                       className="rounded-full"
                     />
                   </div>
-                  {!profile.lebal && (
+
                   <div className="flex flex-col justify-center h-12">
                     <h3 className="font-semibold text-sm group-hover:text-indigo-500">
                       {profile.name}
-                     
                     </h3>
                     <p className="text-sm text-gray-500 group-hover:text-indigo-400">
                       {profile.subSlug}
                     </p>
                   </div>
-                  )}
                 </div>
               </Link>
             )}
+
             
           </>
         ))}

@@ -728,39 +728,34 @@ const contactLinks = [
 ];
 const invoice = [
   {
-    name: "test",
+    name: "James Anderson",
     href: "",
-    icon: <i class="fi fi-brands-facebook"></i>,
-    label: "test",
-    date:"10-02-2024",
+    icon: <i class="fi fi-rr-user"></i>, 
+    subSlug: "10-02-2024",
   },
-  {
-    name: "test",
-    href: "",
-    icon: <i class="fi fi-brands-facebook"></i>,
-    label: "test",
-    date:"10-02-2024",
-  },
-  {
-    name: "test ",
-    href: "",
-    icon: <i class="fi fi-brands-facebook"></i>,
-    label: "test",
-    date:"10-02-2024",
-  },
-  {
-    name: "test ",
-    href: "",
-    icon: <i class="fi fi-brands-facebook"></i>,
-    label: "test",
-    date:"10-02-2024",
-  },
-  {
-    name: "test",
+  {  
+    name: "Bianca Doe",
     href: "",
     icon: <i class="fi fi-rr-user"></i>,
-    label: "test",
-    date:"10-02-2024",
+    subSlug: "10-02-2024",
+  },
+  {
+    name: "Angelina Rhodes",
+    href: "",
+    icon: <i class="fi fi-rr-user"></i>,
+    subSlug: "10-02-2024",
+  },
+  {
+    name: "Samuel Smith",
+    href: "",
+    icon: <i class="fi fi-rr-user"></i>,
+    subSlug: "10-02-2024",
+  },
+  {
+    name: "Gabriel Jobs",
+    href: "",
+    icon: <i class="fi fi-rr-user"></i>,
+    subSlug: "10-02-2024",
   },
 ];
 const invoiceTable = [
@@ -792,7 +787,6 @@ const invoiceTable = [
     unit: "$34",
     total: "$6523",
   },
-
 ];
 export {
   sideBarLinks,

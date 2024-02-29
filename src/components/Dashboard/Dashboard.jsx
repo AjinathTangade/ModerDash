@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import NavBar from "../NavBar/NavBar";
 import SliderComponent from "../SliderComponent/SliderComponent";
 import RevenueUpdates from "../Graphs/RevenueUpdates/RevenueUpdates";
@@ -10,9 +10,14 @@ import Projects from "../Graphs/Projects/Projects";
 import SuperAwesome from "../SuperAwesome/SuperAwesome";
 import BestSellingProducts from "../BestSellingProducts/BestSellingProducts";
 import TopPerformers from "../TopPerformers/TopPerformers";
+import SonnerAlr from "../SonnerAlr/SonnerAlr";
 // import Calendar from "../APPS/Calendar/Calendar";
 
 function Dashboard() {
+  // useEffect(() => {
+  //   alert("working");
+  // }, []);
+
   return (
     <div className="xl:w-5/6">
       {/* <NavBar /> */}
@@ -47,6 +52,9 @@ function Dashboard() {
             </div>
 
             <div className="flex flex-col gap-6 lg:w-4/12 mt-5 lg:mt-0">
+              {/* <div>
+                <SonnerAlr />
+              </div> */}
               <div>
                 <MonthlyEarnings />
               </div>
