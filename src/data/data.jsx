@@ -746,6 +746,12 @@ const invoice = [
     subSlug: "10-02-2024",
   },
   {
+    name: "Rhodes Angelina ",
+    href: "",
+    icon: <i class="fi fi-rr-user"></i>,
+    subSlug: "14-02-2024",
+  },
+  {
     name: "Samuel Smith",
     href: "",
     icon: <i class="fi fi-rr-user"></i>,
