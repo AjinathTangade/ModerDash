@@ -29,13 +29,13 @@ function Invoice() {
             </div>
           </div>
         </div>
-        <div className="border rounded-md flex w-full h-[920px]">
-          <div className="w-3/12">
+        <div className="border rounded-md block lg:flex w-full h-[920px]">
+          <div className=" hidden lg:w-3/12">
             <EmailPerson emailPeople={invoice} />
           </div>
 
-          <div className="w-9/12 border border-l border-y-0 border-r-0">
-            <div className="flex justify-between px-3 h-full max-h-16 items-center border-b">
+          <div className="w-full  border border-l border-y-0 border-r-0">
+            <div className="flex justify-between px-3 h-full max-h-16 items-center border-b py-4 lg:py-0">
               <h3 className="font-medium text-lg text-gray-700">INVOICE</h3>
               <h3 className="font-medium text-lg text-gray-700">#123</h3>
             </div>
@@ -70,70 +70,73 @@ function Invoice() {
                 </div>
               </div>
             </div>
-            <div className="overflow-x-auto px-5">
-              <table className="min-w-full divide-y divide-gray-200 mt-14 mb-10">
-                <thead className="">
-                  <tr>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
-                    >
-                      #
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
-                    >
-                      Description
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
-                    >
-                      Quantity
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
-                    >
-                      Unit Cost
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
-                    >
-                      Total
-                    </th>
-                  </tr>
-                </thead>
-                {invoiceTable.map((table, index) => (
-                  <tbody
-                    className="bg-white divide-y divide-gray-200"
-                    key={index}
-                  >
-                    <tr className="hover:bg-gray-50 border-b">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
-                        {table.id}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
-                        {table.name}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
-                        {table.quantity}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
-                        {table.unit}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
-                        {table.total}
-                      </td>
+            <div className="">
+              <div className="overflow-x-auto px-5">
+                <table className="min-w-full divide-y divide-gray-200 mt-10 mb-2 lg:mt-14 lg:mb-10">
+                  <thead className="">
+                    <tr>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                      >
+                        #
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                      >
+                        Description
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                      >
+                        Quantity
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                      >
+                        Unit Cost
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                      >
+                        Total
+                      </th>
                     </tr>
+                  </thead>
+                  {invoiceTable.map((table, index) => (
+                    <tbody
+                      className="bg-white divide-y divide-gray-200"
+                      key={index}
+                    >
+                      <tr className="hover:bg-gray-50 border-b">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
+                          {table.id}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
+                          {table.name}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
+                          {table.quantity}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
+                          {table.unit}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-700">
+                          {table.total}
+                        </td>
+                      </tr>
 
-                    {/* Add more rows as needed */}
-                  </tbody>
-                ))}
-              </table>
-              <div className="pb-5">
+                      {/* Add more rows as needed */}
+                    </tbody>
+                  ))}
+                </table>
+              </div>
+
+              <div className="pt-5 pb-5 px-5 lg:pt-0">
                 <div className="flex justify-end">
                   <div className="flex flex-col gap-4 w-full">
                     <div className="text-end flex flex-col gap-2 border-b pb-5">
@@ -148,8 +151,12 @@ function Invoice() {
                       <h3 className="font-bold text-xl">Total : $22,943</h3>
                     </div>
                     <div className="flex justify-end items-end gap-5">
-                      <button className="text-sm font-semibold bg-red-100 px-6 py-3 rounded-lg text-red-500 hover:bg-red-400 hover:text-white">Procced to payment </button>
-                      <button className="text-sm font-semibold bg-blue-500 px-5 py-3 rounded-lg text-white hover:bg-blue-700 flex gap-2 items-center"><i class="fi fi-rr-print"></i>Print</button>
+                      <button className="text-sm font-semibold bg-red-100 px-6 py-3 rounded-lg text-red-500 hover:bg-red-400 hover:text-white">
+                        Procced to payment{" "}
+                      </button>
+                      <button className="text-sm font-semibold bg-blue-500 px-5 py-3 rounded-lg text-white hover:bg-blue-700 flex gap-2 items-center">
+                        <i class="fi fi-rr-print"></i>Print
+                      </button>
                     </div>
                   </div>
                 </div>
