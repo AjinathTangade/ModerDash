@@ -32,7 +32,7 @@ function Notes() {
   };
 
   return (
-    <div className="w-full xl:w-7/12 xl:mx-auto mt-32 mb-20 ">
+    <div className="w-full w-9/12 xl:w-8/12 xl:mx-auto mt-32 mb-20">
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-10 ">
           <div className="px-5 bg-indigo-50 rounded-lg">
@@ -53,9 +53,9 @@ function Notes() {
         </div>
         <div>
           <div className="flex gap-5 justify-between p-3 flex-wrap border rounded-lg shadow-[5px] shadow-red relative">
-            <div className="flex gap-8 flex-wrap">
+            <div className="flex gap-3 md:gap-8 flex-wrap">
               <button
-                className={`flex items-center gap-3 ${
+                className={`flex items-center gap-2 md:gap-3 ${
                   activeButton === 1
                     ? "bg-blue-500 p-3 text-white rounded-lg text-md font-medium"
                     : ""
@@ -68,7 +68,7 @@ function Notes() {
                 All Notes
               </button>
               <button
-                className={`flex items-center gap-3 ${
+                className={`flex items-center gap-2 md:gap-3 ${
                   activeButton === 2
                     ? "bg-blue-500 p-3 text-white rounded-lg text-md font-medium"
                     : ""
@@ -81,7 +81,7 @@ function Notes() {
                 Business
               </button>
               <button
-                className={`flex items-center gap-3 ${
+                className={`flex items-center gap-2 md:gap-3 ${
                   activeButton === 3
                     ? "bg-blue-500 p-3 text-white rounded-lg text-md font-medium"
                     : ""
