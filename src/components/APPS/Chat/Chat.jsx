@@ -11,7 +11,7 @@ function Chat() {
     setActiveLink(index);
   };
   return (
-    <div className="w-full xl:w-7/12 xl:mx-auto mt-32 mb-20 ">
+    <div className="w-full w-9/12 xl:w-8/12 xl:mx-auto mt-32 mb-20">
       <div className="flex flex-col gap-10 ">
         <div className="px-5 bg-indigo-50 rounded-lg">
           <div className="flex justify-between items-center">
@@ -29,7 +29,7 @@ function Chat() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row h-[800px]">
+        <div className="flex flex-col md:flex-row md:h-[800px]">
           <div className="border lg:w-80">
             <div className="px-5 py-4 flex flex-col gap-5">
               <div className="flex justify-between h-18 gap-4">
@@ -66,7 +66,7 @@ function Chat() {
                 <RecentChats />
               </div>
             </div>
-            <div className="overflow-y-auto h-screen">
+            <div className="overflow-y-auto md:h-screen">
               {userChat.map((profile, index) => (
                 <div className="group" key={index}>
                   <Link
@@ -109,9 +109,9 @@ function Chat() {
               ))}
             </div>
           </div>
-          <div className="border-l-0 border flex-grow ">
+          <div className="border-l-0 border flex-grow">
             <div className="flex flex-col justify-between h-full">
-              <div className="flex justify-between px-5 pt-5 pb-4 border-b">
+              <div className="flex justify-between px-5 pt-5 pb-4 border-x md:border-b">
                 <div className="flex items-center gap-4">
                   <div className="h-12 w-12">
                     <img
@@ -141,10 +141,9 @@ function Chat() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between h-16 px-5 py-4 border-t">
+              <div className="flex justify-between h-16 px-5 py-4 border-x md:border-t">
                 <div className="flex gap-3 py-2 items-center px-3 w-full">
-                    
-                <i className="fi fi-rr-smile text-xl"></i>
+                  <i className="fi fi-rr-smile text-xl"></i>
                   <input
                     type="text"
                     placeholder="Type a Message"
