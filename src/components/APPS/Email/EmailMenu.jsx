@@ -8,7 +8,7 @@ function EmailMenu({ emailLinks }) {
 
   return (
     <div className="">
-      <div className="px-5 pt-5 mb-5">
+      <div className="p-3 md:px-5 md:pt-5 md:mb-5">
         <div className="flex justify-center">
           <Link
             to=""
@@ -20,7 +20,7 @@ function EmailMenu({ emailLinks }) {
       </div>
 
       <div className="overflow-y-auto h-screen">
-        <div className="px-5 pb-3 border-b">
+        <div className="md:px-5 pb-3 border-b">
           <div className="flex flex-col">
             {emailLinks.slice(0, 4).map((link, index) => (
               <div className="" key={index}>
@@ -35,7 +35,7 @@ function EmailMenu({ emailLinks }) {
             ))}
           </div>
         </div>
-        <div className="pt-4 px-5 pb-3 border-b">
+        <div className="pt-4 md:px-5 md:pb-3 border-b">
           <div className="px-4">
             <h3 className="font-medium text-xs">IMPORTANT</h3>
           </div>
@@ -54,7 +54,7 @@ function EmailMenu({ emailLinks }) {
             ))}
           </div>
         </div>
-        <div className="pt-4 px-5 pb-3">
+        <div className="pt-4 md:px-5 md:pb-3">
           <div className="px-4">
             <h3 className="font-medium text-xs">LABELS</h3>
           </div>

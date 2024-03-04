@@ -29,12 +29,12 @@ function Invoice() {
             </div>
           </div>
         </div>
-        <div className="border rounded-md block lg:flex w-full h-[920px]">
-          <div className=" hidden lg:w-3/12">
+        <div className="border rounded-md block md:flex w-full h-[920px]">
+          <div className="hidden md:block md:w-3/12">
             <EmailPerson emailPeople={invoice} />
           </div>
 
-          <div className="w-full  border border-l border-y-0 border-r-0">
+          <div className="w-full md:w-9/12 border border-l border-y-0 border-r-0">
             <div className="flex justify-between px-3 h-full max-h-16 items-center border-b py-4 lg:py-0">
               <h3 className="font-medium text-lg text-gray-700">INVOICE</h3>
               <h3 className="font-medium text-lg text-gray-700">#123</h3>
