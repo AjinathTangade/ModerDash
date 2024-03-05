@@ -1,8 +1,7 @@
 "use client";
-import { Link } from "react-router-dom";
 import { sideBarLinks, sideBarLinksHome } from "@/data/data";
 import "@flaticon/flaticon-uicons/css/all/all.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 // import { Input } from "@/registry/new-york/ui/input";
 // import { Label } from "@/registry/new-york/ui/label";
@@ -54,12 +53,12 @@ export function MobileNav() {
                           className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
                         >
                           <span>{link.icon}</span>
-                          <NavLink
-                            href={link.href}
+                          <Link
+                            to={link.href}
                             className="text-sm font-medium"
                           >
                             {link.label}
-                          </NavLink>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -72,29 +71,12 @@ export function MobileNav() {
                           className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
                         >
                           <span>{link.icon}</span>
-                          <NavLink
-                            href={link.href}
+                          <Link
+                            to={link.href}
                             className="text-sm font-medium"
                           >
                             {link.label}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                    <ul className="my-5">
-                      <h3 className="font-semibold pb-3">Apps</h3>
-                      {sideBarLinks.map((link, index) => (
-                        <li
-                          key={index}
-                          className="flex gap-4 py-3 items-center mr-4 px-3 rounded-lg hover:cursor-pointer hover:bg-indigo-50 hover:text-indigo-600"
-                        >
-                          <span>{link.icon}</span>
-                          <NavLink
-                            href={link.href}
-                            className="text-sm font-medium"
-                          >
-                            {link.label}
-                          </NavLink>
+                          </Link>
                         </li>
                       ))}
                     </ul>

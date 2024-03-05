@@ -26,7 +26,7 @@ function Dashboard() {
           <div className="">
             <SliderComponent />
           </div>
-          <div className="lg:flex gap-5 justify-between mx-2">
+          <div className="w-full w-9/12 xl:w-11/12 lg:flex gap-5 justify-between mx-2">
             <div className="flex flex-col gap-6">
               <div>
                 <RevenueUpdates />

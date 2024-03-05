@@ -2,7 +2,7 @@ import React from "react";
 import { topPerformers } from "@/data/data";
 function TopPerformers() {
   return (
-    <div>
+    <div className="w-full xl:mx-auto ">
       <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 p-5 flex flex-col gap-11">
         <div className="flex flex-col gap-5">
           <div>

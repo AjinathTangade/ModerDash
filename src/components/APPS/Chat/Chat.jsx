@@ -141,7 +141,7 @@ function Chat() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between h-16 px-5 py-4 border-x md:border-t">
+   <div className="flex justify-between h-16 px-5 py-4 border-x md:border-t">
                 <div className="flex gap-3 py-2 items-center px-3 w-full">
                   <i className="fi fi-rr-smile text-xl"></i>
                   <input
