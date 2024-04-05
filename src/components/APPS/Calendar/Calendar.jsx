@@ -31,7 +31,7 @@ function Calendar() {
 
   return (
 
-    <div className="w-full xl:w-7/12 xl:mx-auto mt-24 lg:mt-32 lg:mb-20">
+    <div className="w-9/12 xl:w-8/12 xl:mx-auto mt-24 lg:mt-32 lg:mb-20">
     <div className="flex flex-col gap-10 ">
       <div className="px-5 bg-indigo-50 rounded-lg">
         <div className="flex justify-between items-center">

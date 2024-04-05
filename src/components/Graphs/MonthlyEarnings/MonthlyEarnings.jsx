@@ -2,12 +2,17 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 import "@flaticon/flaticon-uicons/css/all/all.css";
 import Normal from "./Monthly";
+
 function MonthlyEarnings() {
   return (
     <div>
       <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 flex flex-col">
-        <div id="chart-yearly" className="flex justify-between gap-4 px-5 pt-5">
-          <div className="min-w-36 flex flex-col justify-between">
+        <div
+          id="chart-yearly"
+          className="flex justify-between gap-4 px-5 pt-5"
+          style={{ marginBottom: "1rem" }} // Added marginBottom for spacing
+        >
+          <div className="min-w-40 flex flex-col justify-between">
             <div className="flex flex-col gap-2">
               <h3 className="text-xl font-semibold">Monthly Earnings</h3>
               <p className="text-xl font-semibold">$6,820</p>
@@ -27,7 +32,9 @@ function MonthlyEarnings() {
             </div>
           </div>
         </div>
-        <Normal />
+        <div className="chart-container"> {/* Added container for the chart */}
+          <Normal />
+        </div>
       </div>
     </div>
   );

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import "@flaticon/flaticon-uicons/css/all/all.css";
 function SuperAwesome() {
   return (
-    <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 p-5 flex flex-col gap-11">
+    <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 px-3 py-5 flex flex-col gap-11">
       <div className="flex items-center gap-5">
         <div>
-          <img src="/user-1.jpg" alt="user" className="h-20 w-24 rounded-lg" />
+          <img src="/user-1.jpg" alt="user" className="h-20 w-20 lg:h-20 lg:w-24 rounded-lg" />
         </div>
         <div>
           <h4 className="text-md font-semibold leading">

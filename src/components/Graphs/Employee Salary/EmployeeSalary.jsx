@@ -20,7 +20,6 @@ function EmployeeSalary() {
         },
       ],
       chart: {
-        height: 300,
         type: "bar",
         toolbar: {
           show: false,
@@ -69,7 +68,7 @@ function EmployeeSalary() {
     };
 
     const chart = new ApexCharts(
-      document.querySelector("#chart-empolyee"),
+      document.querySelector("#chart-employee"),
       options
     );
     chart.render();
@@ -81,31 +80,29 @@ function EmployeeSalary() {
   }, []); // Empty dependency array to ensure useEffect runs only once on component mount
 
   return (
-    <div>
-      <div className="shadow-sm px-5 py-5 rounded-lg border border-indigo-100 border-0.5">
-        <div>
-          <h3 className="text-xl font-semibold">Employee Salary</h3>
-          <p className="text-sm font-base text-gray-400 ">Every month</p>
-        </div>
-        <div id="chart-empolyee"></div>
-        <div className="flex gap-5 justify-between items-center">
-          <div className="flex gap-4 items-center justify-center">
-            <div className="bg-indigo-50 w-11 h-11 flex items-center justify-center rounded-md">
-              <i className="fi fi-br-grid text-indigo-500"></i>
-            </div>
-            <div className="flex flex-col gap-1">
-              <p className="text-sm text-gray-600">Salary</p>
-              <p className="text-md font-semibold">$36,358</p>
-            </div>
+    <div className="shadow-sm px-3 md:px-2 py-5 rounded-lg border border-indigo-100 border-0.5">
+      <div>
+        <h3 className="text-xl font-semibold">Employee Salary</h3>
+        <p className="text-sm font-base text-gray-400 ">Every month</p>
+      </div>
+      <div id="chart-employee" style={{ width: "100%" }} />
+      <div className="flex gap-3 justify-between items-center">
+        <div className="flex gap-4 items-center justify-center">
+          <div className="bg-indigo-50 w-11 h-11 flex items-center justify-center rounded-md">
+            <i className="fi fi-br-grid text-indigo-500"></i>
           </div>
-          <div className="flex gap-4 items-center justify-center">
-            <div className="bg-indigo-50 w-11 h-11 flex items-center justify-center rounded-md">
-              <i className="fi fi-br-grid text-gray-600"></i>
-            </div>
-            <div className="flex flex-col gap-1">
-              <p className="text-sm text-gray-600">Profit</p>
-              <p className="text-md font-semibold">$5,635</p>
-            </div>
+          <div className="flex flex-col gap-1">
+            <p className="text-sm text-gray-600">Salary</p>
+            <p className="text-md font-semibold">$36,358</p>
+          </div>
+        </div>
+        <div className="flex gap-4 items-center justify-center">
+          <div className="bg-indigo-50 w-11 h-11 flex items-center justify-center rounded-md">
+            <i className="fi fi-br-grid text-gray-600"></i>
+          </div>
+          <div className="flex flex-col gap-1">
+            <p className="text-sm text-gray-600">Profit</p>
+            <p className="text-md font-semibold">$5,635</p>
           </div>
         </div>
       </div>

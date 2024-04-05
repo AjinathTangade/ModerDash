@@ -12,7 +12,6 @@ function Projects() {
         },
       ],
       chart: {
-        height: 100,
         type: "bar",
         toolbar: {
           show: false,
@@ -50,8 +49,6 @@ function Projects() {
         },
       },
       xaxis: {
-        show: false,
-        // categories: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
         labels: {
           show: false,
         },
@@ -78,8 +75,9 @@ function Projects() {
       chart.destroy();
     };
   }, []);
+
   return (
-    <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 h-30">
+    <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5">
       <div className="px-4 pt-4">
         <div className="flex flex-col gap-1 ">
           <p className="text-sm text-gray-600">Projects</p>
@@ -87,16 +85,14 @@ function Projects() {
         </div>
         <div className="flex items-center gap-1 pt-3">
           <span className="">
-          <i className="fi fi-bs-arrow-up-left text-teal-400 text-xs font-base h-5 w-5 bg-teal-100 rounded-full flex items-center justify-center"></i>
+            <i className="fi fi-bs-arrow-up-left text-teal-400 text-xs font-base h-5 w-5 bg-teal-100 rounded-full flex items-center justify-center"></i>
           </span>{" "}
           <p className="text-sm text-gray-600 ">
             <span className="text-gray-900">+9%</span>
           </p>
         </div>
       </div>
-      <div>
-        <div id="chart-project"></div>
-      </div>
+      <div id="chart-project" style={{ width: "100%" }} />
     </div>
   );
 }

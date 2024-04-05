@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ApexCharts from "apexcharts";
 import "@flaticon/flaticon-uicons/css/all/all.css";
+
 function Customers() {
   useEffect(() => {
     const options = {
@@ -11,9 +12,6 @@ function Customers() {
         },
       ],
       chart: {
-        height: "100",
-        width: "200",
-        objectFit: "cover",
         type: "area",
         stacked: false,
         toolbar: {
@@ -60,7 +58,6 @@ function Customers() {
       tooltip: {
         enabled: true,
       },
-
       fill: {
         type: "gradient",
         gradient: {
@@ -85,26 +82,22 @@ function Customers() {
   }, []);
 
   return (
-    <div>
-      <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5 h-30">
-        <div className="px-4 pt-4">
-          <div className="flex flex-col gap-1 ">
-            <p className="text-sm text-gray-600">Customers</p>
-            <p className="text-xl font-semibold">36,358</p>
-          </div>
-          <div className="flex items-center gap-1 pt-3">
-            <span className="">
-              <i className="fi fi-bs-arrow-up-left text-red-400 text-xs font-base h-5 w-5 bg-red-100 rounded-full flex items-center justify-center"></i>
-            </span>{" "}
-            <p className="text-sm text-gray-600 ">
-              <span className="text-gray-900">+9%</span>
-            </p>
-          </div>
+    <div className="shadow-sm rounded-lg border border-indigo-100 border-0.5">
+      <div className="px-4 pt-4">
+        <div className="flex flex-col gap-1 ">
+          <p className="text-sm text-gray-600">Customers</p>
+          <p className="text-xl font-semibold">36,358</p>
         </div>
-        <div className=" relative left-[-11px] bottom-[-30px]">
-          <div id="chart-customers" />
+        <div className="flex items-center gap-1 pt-3">
+          <span className="">
+            <i className="fi fi-bs-arrow-up-left text-red-400 text-xs font-base h-5 w-5 bg-red-100 rounded-full flex items-center justify-center"></i>
+          </span>{" "}
+          <p className="text-sm text-gray-600 ">
+            <span className="text-gray-900">+9%</span>
+          </p>
         </div>
       </div>
+      <div id="chart-customers"  />
     </div>
   );
 }

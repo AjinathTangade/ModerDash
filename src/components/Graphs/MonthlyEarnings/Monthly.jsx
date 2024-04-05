@@ -15,7 +15,6 @@ function Normal() {
         },
       ],
       chart: {
-        height: 200,
         type: "area",
         stacked: false,
         toolbar: {
@@ -43,10 +42,9 @@ function Normal() {
       },
       xaxis: {
         labels: {
-          show:true,
-        }, 
+          show: true,
+        },
       },
-      
     };
 
     const chart = new ApexCharts(
@@ -61,7 +59,7 @@ function Normal() {
     };
   }, []);
 
-  return <div id="chart-normal" />;
+  return <div className="chart-container" id="chart-normal" />;
 }
 
 export default Normal;

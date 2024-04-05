@@ -10,23 +10,18 @@ import Projects from "../Graphs/Projects/Projects";
 import SuperAwesome from "../SuperAwesome/SuperAwesome";
 import BestSellingProducts from "../BestSellingProducts/BestSellingProducts";
 import TopPerformers from "../TopPerformers/TopPerformers";
-import SonnerAlr from "../SonnerAlr/SonnerAlr";
-// import Calendar from "../APPS/Calendar/Calendar";
+import Notification from "../Notification/Notification";
 
 function Dashboard() {
-  // useEffect(() => {
-  //   alert("working");
-  // }, []);
 
   return (
-    <div className="xl:w-5/6">
-      {/* <NavBar /> */}
+    <div className="xl:w-5/6">   
       <div className="relative top-0 xl:top-14">
-        <div className="w-full xl:w-9/12 xl:mx-auto flex flex-col gap-6">
+        <div className="w-full xl:w-10/12 xl:mx-auto flex flex-col gap-6">
           <div className="">
             <SliderComponent />
           </div>
-          <div className="w-full w-9/12 xl:w-11/12 lg:flex gap-5 justify-between mx-2">
+          <div className="w-full xl:w-12/12  lg:flex gap-5 justify-between mx-2">
             <div className="flex flex-col gap-6">
               <div>
                 <RevenueUpdates />
@@ -35,6 +30,8 @@ function Dashboard() {
                 <div>
                   <EmployeeSalary />
                 </div>
+
+                
                 <div className="flex flex-col gap-5 ">
                   <div className="flex gap-5 justify-between w-full">
                     <div className="w-6/12">
@@ -49,12 +46,10 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
+              <Notification/>
             </div>
-
+           
             <div className="flex flex-col gap-6 lg:w-4/12 mt-5 lg:mt-0">
-              {/* <div>
-                <SonnerAlr />
-              </div> */}
               <div>
                 <MonthlyEarnings />
               </div>

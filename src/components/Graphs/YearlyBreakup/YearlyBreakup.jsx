@@ -1,35 +1,47 @@
 import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import "@flaticon/flaticon-uicons/css/all/all.css";
+
 function YearlyBreakup() {
   const [series, setSeries] = useState([44, 55, 13, 33]);
-  const [options] = useState({
+  const [options, setOptions] = useState({
     chart: {
-      width: 380,
+      width: 380, // Default width
       type: "donut",
     },
     dataLabels: {
       enabled: false,
     },
-    responsive: [
-      {
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: 200,
-          },
-          legend: {
-            show: false,
-          },
-        },
-      },
-    ],
     legend: {
       position: "right",
       offsetY: 0,
       height: 230,
     },
   });
+
+  // Function to update chart options based on screen width
+  const updateChartOptions = () => {
+    const newOptions = { ...options };
+
+    // if (window.innerWidth < 480) {
+    //   newOptions.chart.width = 300; // Adjust width for smaller screens
+    //   newOptions.legend.show = false; // Hide legend for smaller screens
+    // } else {
+    //   newOptions.chart.width = 380; // Default width for larger screens
+    //   newOptions.legend.show = true; // Show legend for larger screens
+    // }
+
+    setOptions(newOptions);
+  };
+
+  // Update chart options when component mounts and on window resize
+  React.useEffect(() => {
+    updateChartOptions();
+    window.addEventListener("resize", updateChartOptions);
+    return () => {
+      window.removeEventListener("resize", updateChartOptions);
+    };
+  }, []);
 
   return (
     <div className="">
@@ -52,12 +64,7 @@ function YearlyBreakup() {
           <div>
             <div>
               <div className="chart-wrap">
-                <ReactApexChart
-                  options={options}
-                  series={series}
-                  type="donut"
-                  width={180}
-                />
+                <ReactApexChart options={options} series={series} type="donut" />
               </div>
             </div>
           </div>
